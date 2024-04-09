@@ -1,0 +1,26 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "my beautiful portfolio",
+  "main": "index.html",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DoctorRon64/DoctorRon64.github.io.git"
+  },
+  "author": "drron",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DoctorRon64/DoctorRon64.github.io/issues"
+  },
+  "homepage": "https://github.com/DoctorRon64/DoctorRon64.github.io#readme",
+  "devDependencies": {
+    "gulp": "^5.0.0",
+    "gulp-sass": "^5.1.0"
+  }
+}
