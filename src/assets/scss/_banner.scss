@@ -1,16 +1,7 @@
-.banner{
-  background:#e685b5;
-  border:1px solid red;
-  color:white;
-  max-width: 300px;
-  
-  &-container {
-    background:green;
-    border: 10px;
-  }
-
-  &-content {
-    background: blue;
-    border: 15px;
-  }
+.banner {
+  background-color: darkgrey;
+  padding: 100px;
+  text-align: center;
+  color: #333;
+  font-family: Arial, sans-serif;
 }

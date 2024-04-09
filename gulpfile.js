@@ -1,58 +1,60 @@
-// Initialize modules
-// Importing specific gulp API functions lets us write them below as series() instead of gulp.series()
-const { src, dest, watch, series, parallel } = require('gulp');
-// Importing all the Gulp-related packages we want to use
-const sass = require('gulp-sass')(require('sass'));
-const concat = require('gulp-concat');
-const terser = require('gulp-terser');
-const postcss = require('gulp-postcss');
-const autoprefixer = require('autoprefixer');
-const cssnano = require('cssnano');
-const replace = require('gulp-replace');
-const browsersync = require('browser-sync').create();
+import gulp from 'gulp';
+import dartSass from 'sass';
+import gulpSass from 'gulp-sass';
+import concat from 'gulp-concat';
+import terser from 'gulp-terser';
+import postcss from 'gulp-postcss';
+import autoprefixer from 'autoprefixer';
+import cssnano from 'cssnano';
+import replace from 'gulp-replace';
+import browserSync from 'browser-sync';
+import imagemin from 'gulp-imagemin';
 
-// File paths
+const {src, dest, watch, series, parallel} = gulp;
+const browser = browserSync.create();
+const sass = gulpSass(dartSass);
+
 const files = {
     scssPath: 'src/assets/scss/**/*.scss',
     jsPath: 'src/assets/js/**/*.js',
     htmlPath: 'src/html/*.html',
-    imgPath: 'src/assets/img/',
+    imgPath: 'src/assets/img/**/*.*',
 };
 
-// Sass task: compiles the style.scss file into style.css
-function scssTask() {
-    return src(files.scssPath, { sourcemaps: true }) // set source and turn on sourcemaps
-        .pipe(sass()) // compile SCSS to CSS
-        .pipe(postcss([autoprefixer(), cssnano()])) // PostCSS plugins
-        .pipe(dest('docs/assets/css/', { sourcemaps: '.' })); // put final CSS in dist folder with sourcemap
+function scssTask(cb) {
+    return src(files.scssPath, {sourcemaps: true})
+        .pipe(sass({outputStyle: 'compressed', includePaths: ['node_modules']}).on('error', sass.logError))
+        .pipe(postcss([autoprefixer()]))
+        .pipe(dest('docs/assets/css/', {sourcemaps: '.'}))
+        .on('end', cb);
 }
 
-// JS task: concatenates and uglifies JS files to script.js
-function jsTask() {
-    return src(
-        [
-            files.jsPath,
-            //,'!' + 'includes/js/jquery.min.js', // to exclude any specific files
-        ],
-        { sourcemaps: true }
-    )
+function jsTask(cb) {
+    return src(files.jsPath, {sourcemaps: true})
         .pipe(concat('app.js'))
         .pipe(terser())
-        .pipe(dest('docs/assets/js/', { sourcemaps: '.' }));
+        .pipe(dest('docs/assets/js/', {sourcemaps: '.'}))
+        .on('end', cb);
 }
 
-// Cachebust
-function cacheBustTask() {
+function imgTask(cb) {
+    return src(files.imgPath)
+        .pipe(imagemin())
+        .on('error', console.error) // Handle errors
+        .pipe(dest('docs/assets/img/')) // Save optimized images
+        .on('end', cb);
+}
+
+function cacheBustTask(cb) {
     var cbString = new Date().getTime();
     return src(['src/html/index.html'])
         .pipe(replace(/cb=\d+/g, 'cb=' + cbString))
-        .pipe(dest('docs/'));
+        .pipe(dest('docs/'))
+        .on('end', cb);
 }
 
-// Browsersync to spin up a local server
 function browserSyncServe(cb) {
-    // initializes browsersync server
-    browsersync.init({
+    browser.init({
         server: {
             baseDir: 'docs/',
         },
@@ -65,43 +67,24 @@ function browserSyncServe(cb) {
     });
     cb();
 }
+
 function browserSyncReload(cb) {
-    // reloads browsersync server
-    browsersync.reload();
+    browser.reload();
     cb();
 }
 
-// Watch task: watch SCSS and JS files for changes
-// If any change, run scss and js tasks simultaneously
-function watchTask() {
-    watch(
-        [files.scssPath, files.jsPath, files.htmlPath],
-        /*{ interval: 1000, usePolling: true },*/ //Makes docker work
-        series(parallel(scssTask, jsTask, cacheBustTask))
-    );
+function watchTask(cb) {
+    watch(files.scssPath, {debounceDelay: 200}, scssTask);
+    watch(files.jsPath, {debounceDelay: 200}, jsTask);
+    watch(files.htmlPath, {debounceDelay: 200}, cacheBustTask);
+    watch(files.imgPath, {debounceDelay: 200}, imgTask);
+    watch('docs/html/*.html').on('change', browserSyncReload);
+    cb();
 }
 
-// Browsersync Watch task
-// Watch HTML file for change and reload browsersync server
-// watch SCSS and JS files for changes, run scss and js tasks simultaneously and update browsersync
-function bsWatchTask() {
-    watch('docs/html/index.html', browserSyncReload);
-    watch(
-        [files.scssPath, files.jsPath],
-        /*{ interval: 1000, usePolling: true },*/ //Makes docker work
-        series(parallel(scssTask, jsTask), cacheBustTask, browserSyncReload)
-    );
-}
-
-// Export the default Gulp task so it can be run
-// Runs the scss and js tasks simultaneously
-// then runs cacheBust, then watch task
-exports.default = series(parallel(scssTask, jsTask), cacheBustTask, browserSyncServe, watchTask);
-
-// Runs all of the above but also spins up a local Browsersync server
-// Run by typing in "gulp bs" on the command line
-exports.bs = series(
-    parallel(scssTask, jsTask),
+export default series(
+    parallel(scssTask, jsTask, imgTask),
     cacheBustTask,
-    browserSyncServe
+    browserSyncServe,
+    watchTask
 );
