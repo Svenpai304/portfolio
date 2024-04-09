@@ -1,0 +1,1 @@
+{"version":3,"sources":["_test.scss","app.css"],"names":[],"mappings":"AAAA,GAEE,sBAAA,CADA,UCEF,CDEA,KACE,oBCCF","file":"app.css","sourcesContent":["h1 {\r\n  color: black;\r\n  border:10px solid white;\r\n}\r\n\r\nbody {\r\n  background-color: red;\r\n}","h1 {\n  color: black;\n  border: 10px solid white;\n}\n\nbody {\n  background-color: red;\n}"]}
