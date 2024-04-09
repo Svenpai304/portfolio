@@ -20,7 +20,9 @@
   },
   "homepage": "https://github.com/DoctorRon64/DoctorRon64.github.io#readme",
   "devDependencies": {
+    "browser-sync": "^3.0.2",
     "gulp": "^5.0.0",
-    "gulp-sass": "^5.1.0"
+    "gulp-sass": "^5.1.0",
+    "sass": "^1.74.1"
   }
 }
