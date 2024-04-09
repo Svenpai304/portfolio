@@ -15,6 +15,7 @@ const browsersync = require('browser-sync').create();
 const files = {
     scssPath: 'src/assets/scss/**/*.scss',
     jsPath: 'src/assets/js/**/*.js',
+    htmlPath: 'src/html/*.html'
 };
 
 // Sass task: compiles the style.scss file into style.css
@@ -42,9 +43,9 @@ function jsTask() {
 // Cachebust
 function cacheBustTask() {
     var cbString = new Date().getTime();
-    return src(['docs/index.html'])
+    return src(['src/html/index.html'])
         .pipe(replace(/cb=\d+/g, 'cb=' + cbString))
-        .pipe(dest('.'));
+        .pipe(dest('docs/'));
 }
 
 // Browsersync to spin up a local server
@@ -73,9 +74,9 @@ function browserSyncReload(cb) {
 // If any change, run scss and js tasks simultaneously
 function watchTask() {
     watch(
-        [files.scssPath, files.jsPath],
+        [files.scssPath, files.jsPath, files.htmlPath],
         /*{ interval: 1000, usePolling: true },*/ //Makes docker work
-        series(parallel(scssTask, jsTask))
+        series(parallel(scssTask, jsTask, cacheBustTask))
     );
 }
 
@@ -83,18 +84,18 @@ function watchTask() {
 // Watch HTML file for change and reload browsersync server
 // watch SCSS and JS files for changes, run scss and js tasks simultaneously and update browsersync
 function bsWatchTask() {
-    watch('docs/index.html', browserSyncReload);
+    watch('docs/html/index.html', browserSyncReload);
     watch(
         [files.scssPath, files.jsPath],
         /*{ interval: 1000, usePolling: true },*/ //Makes docker work
-        series(parallel(scssTask, jsTask), browserSyncReload)
+        series(parallel(scssTask, jsTask), cacheBustTask, browserSyncReload)
     );
 }
 
 // Export the default Gulp task so it can be run
 // Runs the scss and js tasks simultaneously
 // then runs cacheBust, then watch task
-exports.default = series(parallel(scssTask, jsTask), browserSyncServe, watchTask);
+exports.default = series(parallel(scssTask, jsTask), cacheBustTask, browserSyncServe, watchTask);
 
 // Runs all of the above but also spins up a local Browsersync server
 // Run by typing in "gulp bs" on the command line

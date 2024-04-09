@@ -1,0 +1,16 @@
+.banner{
+  background:#e685b5;
+  border:1px solid red;
+  color:white;
+  max-width: 300px;
+  
+  &-container {
+    background:green;
+    border: 10px;
+  }
+
+  &-content {
+    background: blue;
+    border: 15px;
+  }
+}
