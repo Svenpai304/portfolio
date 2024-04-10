@@ -1,1 +1,1 @@
-{"version":3,"sources":["app.js"],"names":["heyThere","alert"],"mappings":"AAAA,SAAAA,WACAC,MAAA,WACA","file":"app.js","sourcesContent":["function heyThere() {\r\n    alert(\"Hey You!\")\r\n}"]}
+{"version":3,"sources":[],"names":[],"mappings":"","file":"app.js","sourcesContent":[]}

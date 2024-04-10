@@ -45,6 +45,11 @@ function imgTask(cb) {
         .on('end', cb);
 }
 
+function htmlTask(cb) {
+    return src(files.htmlPath)
+        .pipe(dest('docs/'));
+}
+
 function cacheBustTask(cb) {
     var cbString = new Date().getTime();
     return src(['src/html/index.html'])
@@ -68,22 +73,21 @@ function browserSyncServe(cb) {
     cb();
 }
 
-function browserSyncReload(cb) {
+function browserSyncReload() {
     browser.reload();
-    cb();
 }
 
 function watchTask(cb) {
-    watch(files.scssPath, {debounceDelay: 200}, scssTask);
-    watch(files.jsPath, {debounceDelay: 200}, jsTask);
-    watch(files.htmlPath, {debounceDelay: 200}, cacheBustTask);
-    watch(files.imgPath, {debounceDelay: 200}, imgTask);
-    watch('docs/html/*.html').on('change', browserSyncReload);
+    watch(files.scssPath, {debounceDelay: 100}, scssTask);
+    watch(files.jsPath, {debounceDelay: 100}, jsTask);
+    watch(files.htmlPath, {debounceDelay: 100}, series(htmlTask, cacheBustTask));
+    watch(files.imgPath, {debounceDelay: 100}, imgTask);
+    watch('docs/**/*.html').on('change', browserSyncReload);
     cb();
 }
 
 export default series(
-    parallel(scssTask, jsTask, imgTask),
+    parallel(scssTask, jsTask, imgTask, htmlTask),
     cacheBustTask,
     browserSyncServe,
     watchTask

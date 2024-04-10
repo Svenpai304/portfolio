@@ -1,0 +1,18 @@
+.bigText {
+  font-size: 24px;
+  color: #333;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.listText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+}
+
+.listText ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
