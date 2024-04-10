@@ -1,5 +1,5 @@
 import gulp from 'gulp';
-import dartSass from 'sass';
+import * as dartSass from 'sass';
 import gulpSass from 'gulp-sass';
 import concat from 'gulp-concat';
 import terser from 'gulp-terser';
@@ -8,7 +8,7 @@ import autoprefixer from 'autoprefixer';
 import cssnano from 'cssnano';
 import replace from 'gulp-replace';
 import browserSync from 'browser-sync';
-import imagemin from 'gulp-imagemin';
+import imagemin, {gifsicle, mozjpeg, optipng, svgo} from 'gulp-imagemin';
 
 const {src, dest, watch, series, parallel} = gulp;
 const browser = browserSync.create();
@@ -39,7 +39,23 @@ function jsTask(cb) {
 
 function imgTask(cb) {
     return src(files.imgPath)
-        .pipe(imagemin())
+        .pipe(imagemin([
+            gifsicle({interlaced: true}),
+            mozjpeg({quality: 75, progressive: true}),
+            optipng({optimizationLevel: 5}),
+            svgo({
+                plugins: [
+                    {
+                        name: 'removeViewBox',
+                        active: true
+                    },
+                    {
+                        name: 'cleanupIDs',
+                        active: false
+                    }
+                ]
+            })
+        ]))
         .on('error', console.error) // Handle errors
         .pipe(dest('docs/assets/img/')) // Save optimized images
         .on('end', cb);
@@ -47,7 +63,8 @@ function imgTask(cb) {
 
 function htmlTask(cb) {
     return src(files.htmlPath)
-        .pipe(dest('docs/'));
+        .pipe(dest('docs/'))
+        .on('end', cb);
 }
 
 function cacheBustTask(cb) {
@@ -74,20 +91,21 @@ function browserSyncServe(cb) {
 }
 
 function browserSyncReload() {
+    console.log('relolzxcad')
     browser.reload();
 }
 
 function watchTask(cb) {
-    watch(files.scssPath, {debounceDelay: 100}, scssTask);
-    watch(files.jsPath, {debounceDelay: 100}, jsTask);
-    watch(files.htmlPath, {debounceDelay: 100}, series(htmlTask, cacheBustTask));
-    watch(files.imgPath, {debounceDelay: 100}, imgTask);
-    watch('docs/**/*.html').on('change', browserSyncReload);
+    watch(files.scssPath).on('all', gulp.series(scssTask, browserSyncReload));
+    watch(files.jsPath).on('all', gulp.series(jsTask, browserSyncReload));
+    watch(files.htmlPath).on('all', gulp.series(htmlTask, cacheBustTask, browserSyncReload));
+    //watch(files.imgPath).on('all', gulp.series(imgTask, browserSyncReload));
+    watch('docs/**/*.html').on('all', browserSyncReload);
     cb();
 }
 
 export default series(
-    parallel(scssTask, jsTask, imgTask, htmlTask),
+    parallel(scssTask, jsTask, htmlTask),
     cacheBustTask,
     browserSyncServe,
     watchTask

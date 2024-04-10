@@ -1,15 +1,20 @@
 .navigateBar{
   background-color: #282828;
   padding: 50px 0;
-  text-align: center;
-  position: relative;
+  position: sticky;
+  color:white;
+  text-align: left;
+  font-size: 30px;
+  top:0;
+  left:0;
+  z-index:10;
 }
 
 .pageButtons {
-  font-family: 'Minnie', NavigationFont, sans-serif;
+  font-family: "Pacifico", cursive;
   display: flex;
   justify-content: center;
-  position: absolute;
+  /*position: absolute;*/
   bottom: 20px;
   left: 0;
   right: 0;
@@ -22,8 +27,7 @@
     padding: 10px 20px;
     border: 2px solid transparent;
     border-radius: 5px;
-    transition: background-color 0.3s ease,
-    border-color 0.3s ease;
+    transition: background-color 0.3s ease,border-color 0.3s ease;
   }
 
   & a:hover {
