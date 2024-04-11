@@ -18,7 +18,7 @@ const files = {
   scssPath: 'src/assets/scss/**/*.scss',
   jsPath: 'src/assets/js/**/*.js',
   htmlPath: 'src/html/*.html',
-  imgPath: 'src/assets/img/**/*.*',
+  imgPath: 'src/assets/img/**/*.{jpg,jpeg,png,svg}',
 };
 
 function scssTask(cb) {
@@ -38,7 +38,7 @@ function jsTask(cb) {
 }
 
 function imgTask(cb) {
-  return src(files.imgPath)
+  return src(files.imgPath, { encoding: false })
     .pipe(imagemin([
       gifsicle({ interlaced: true }),
       mozjpeg({ quality: 75, progressive: true }),
@@ -107,7 +107,7 @@ function watchTask(cb) {
 }
 
 export default series(
-  parallel(scssTask, jsTask, htmlTask),
+  parallel(scssTask, jsTask, htmlTask, 'images'),
   cacheBustTask,
   browserSyncServe,
   watchTask
