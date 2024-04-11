@@ -18,7 +18,7 @@ const files = {
   scssPath: 'src/assets/scss/**/*.scss',
   jsPath: 'src/assets/js/**/*.js',
   htmlPath: 'src/html/*.html',
-  imgPath: 'src/assets/img/**/*.{jpg,jpeg,png,svg}',
+  imgPath: 'src/assets/img/**/*.{jpg,jpeg,png,svg,gif}',
 };
 
 function scssTask(cb) {
@@ -93,7 +93,6 @@ function browserSyncServe(cb) {
 }
 
 function browserSyncReload() {
-  console.log('relolzxcad')
   browser.reload();
 }
 
