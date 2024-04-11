@@ -1,3 +1,9 @@
+.title{
+  font-family: Questrial, sans-serif;
+  font-size: 40px;
+  color: white;
+}
+
 .titleBar {
   background-color: #141414;
   text-align: center;
@@ -5,30 +11,21 @@
 
 .titleBarL {
   @extend .titleBar;
-  background-color: #141414;
   text-align: left;
-}
-
-.title{
-  font-size: 40px;
-  color: white;
-  margin-top: 5px;
 }
 
 .text{
   font-family: Questrial, sans-serif;
   color: white;
   font-size: 24px;
-  margin-top: 20px;
+  margin-top: 15px;
 }
 
 .textBar {
-  max-width: 600px;
   text-align: center;
 }
 
 .textBarL {
-  @extend .textBar;
   text-align: left;
 }
 
