@@ -13,3 +13,4 @@ function adjustIframeHeight() {
 
 adjustIframeHeight();
 document.getElementById('iframeContent').addEventListener('load', adjustIframeHeight);
+changeIframeSrc('Proj/code.html');
