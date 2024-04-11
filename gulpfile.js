@@ -17,7 +17,7 @@ const sass = gulpSass(dartSass);
 const files = {
   scssPath: 'src/assets/scss/**/*.scss',
   jsPath: 'src/assets/js/**/*.js',
-  htmlPath: 'src/html/*.html',
+  htmlPath: 'src/html/**/*.html',
   imgPath: 'src/assets/img/**/*.{jpg,jpeg,png,svg,gif}',
 };
 

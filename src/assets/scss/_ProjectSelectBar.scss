@@ -1,0 +1,48 @@
+.projectBar{
+  padding: 20px 0;
+  position: sticky;
+  color:white;
+  text-align: left;
+  font-size: 30px;
+  top:0;
+  left:0;
+  z-index:10;
+}
+
+.selectButton {
+  font-family: 'Outfit', cursive;
+  display: flex;
+  justify-content: center;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+
+  & a {
+    color: mediumslateblue;
+    font-size: 24px;
+    margin: 0 10px;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid transparent;
+    border-radius: 5px;
+    transition: background-color 0.3s ease,border-color 0.3s ease;
+  }
+
+  & a:hover {
+    background-color: mediumpurple;
+    border: 2px solid transparent;
+    color: rebeccapurple;
+  }
+
+  & a:active {
+    background-color: #2d2d2d;
+    border: 2px solid;
+    color: white;
+  }
+
+  & a.disabled {
+    pointer-events: none;
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}

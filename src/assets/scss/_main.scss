@@ -1,8 +1,23 @@
-.theme {
+.defaulttheme {
   background-color: #2d2d2d;
 }
 
-iconify-icon {
+.codetheme {
+  background-color: #0298ef;
+  overflow: hidden;
+}
+
+.musictheme {
+  background-color: #ef8802;
+  overflow: hidden;
+}
+
+.arttheme {
+  background-color: #7102ef;
+  overflow: hidden;
+}
+
+.textIcons {
   transform: translateY(5px);
 }
 
@@ -10,4 +25,9 @@ iconify-icon {
   max-width: 1000px;
   margin: 0 auto;
   margin-top: 15px;
+}
+
+.projcontainer{
+  @extend .container;
+  max-width: 1500px;
 }
