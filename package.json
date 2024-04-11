@@ -39,5 +39,8 @@
   "dependencies": {
     "bootstrap": "^5.3.3",
     "gulp-cli": "^3.0.0"
+  },
+  "volta": {
+    "node": "18.20.2"
   }
 }
