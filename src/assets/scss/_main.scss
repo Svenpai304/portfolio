@@ -1,18 +1,18 @@
-.defaulttheme {
+.defaultTheme {
   background-color: #2d2d2d;
 }
 
-.codetheme {
+.codeTheme {
   background-color: #0298ef;
   overflow: hidden;
 }
 
-.musictheme {
+.musicTheme {
   background-color: #ef8802;
   overflow: hidden;
 }
 
-.arttheme {
+.artTheme {
   background-color: #7102ef;
   overflow: hidden;
 }
@@ -27,7 +27,7 @@
   margin-top: 15px;
 }
 
-.projcontainer{
+.projContainer{
   @extend .container;
   max-width: none;
 }

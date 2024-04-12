@@ -7,7 +7,7 @@
     <link rel="icon" href="https://i.gifer.com/6oa.gif" sizes="16x16"/>
     <link rel="stylesheet" href="/assets/css/app.css">
 </head>
-<body class="defaulttheme">
+<body class="defaultTheme" id="topOfPage">
 <div class="navigateBar">
     <div class="pageButtons">
         <a href="./index.html">
@@ -27,13 +27,16 @@
 <div class="banner">
     <h1>Projects</h1>
 </div>
-<div class="projcontainer">
+<div class="projContainer">
     <div class="projectBar">
         <div class="selectButton">
             <a id="codeBtn" href="#" class="disabled" onclick="changeIframeSrc('Proj/code.html')"><iconify-icon icon="material-symbols:code" class="textIcons"></iconify-icon> Code</a>
             <a id="musicBtn" href="#" onclick="changeIframeSrc('Proj/music.html')"><iconify-icon icon="mingcute:music-fill" class="textIcons"></iconify-icon> Music</a>
             <a id="artBtn" href="#" onclick="changeIframeSrc('Proj/art.html')"><iconify-icon icon="mdi:art" class="textIcons"></iconify-icon> Art</a>
         </div>
+    </div>
+    <div>
+        <a href="#topOfPage" class="scollButton"><iconify-icon icon="emojione-v1:top-arrow" width="16" height="16"></iconify-icon></a>
     </div>
     <div>
         <iframe id="iframeContent" src="code.html" width="100%" height="800px"></iframe>
