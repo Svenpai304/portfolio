@@ -11,6 +11,16 @@ function adjustIframeHeight() {
     iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
 }
 
+window.addEventListener('scroll', function() {
+    var button = document.querySelector('.scrollButton');
+    if (window.scrollY < 100) {
+        button.style.opacity = '0';
+    } else {
+        button.style.opacity = '1';
+    }
+});
+
+
 adjustIframeHeight();
 document.getElementById('iframeContent').addEventListener('load', adjustIframeHeight);
 changeIframeSrc('Proj/code.html');
