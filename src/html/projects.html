@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Projects</title>
     <link rel="icon" href="https://i.gifer.com/6oa.gif" sizes="16x16"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css"/>
     <link rel="stylesheet" href="/assets/css/app.css">
 </head>
-<body class="defaultTheme" id="topOfPage">
+<body class="projBg" id="topOfPage">
 <div class="navigateBar">
     <div class="pageButtons">
         <a href="./index.html">
@@ -27,21 +28,78 @@
 <div class="banner">
     <h1>Projects</h1>
 </div>
-<div class="projContainer">
-    <div class="projectBar">
+<div class="projUnderline">
+    <div class="projSelectBar">
         <div class="selectButton">
-            <a id="codeBtn" href="#" class="disabled" onclick="changeIframeSrc('Proj/code.html')"><iconify-icon icon="material-symbols:code" class="textIcons"></iconify-icon> Code</a>
-            <a id="musicBtn" href="#" onclick="changeIframeSrc('Proj/music.html')"><iconify-icon icon="mingcute:music-fill" class="textIcons"></iconify-icon> Music</a>
-            <a id="artBtn" href="#" onclick="changeIframeSrc('Proj/art.html')"><iconify-icon icon="mdi:art" class="textIcons"></iconify-icon> Art</a>
+            <a id="codeBtn" href="#codePart">
+                <iconify-icon icon="material-symbols:code" class="textIcons"></iconify-icon>
+                Code</a>
+            <a id="musicBtn" href="#MusicPart">
+                <iconify-icon icon="mingcute:music-fill" class="textIcons"></iconify-icon>
+                Music</a>
+            <a id="artBtn" href="#ArtPart">
+                <iconify-icon icon="mdi:art" class="textIcons"></iconify-icon>
+                Art</a>
         </div>
     </div>
-    <div>
-        <a href="#topOfPage" class="scrollButton"><iconify-icon icon="mdi:arrow-top-drop-circle-outline" width="48" height="48"  style="color: white"></iconify-icon></a>
-    </div>
-    <div>
-        <iframe id="iframeContent" src="code.html" width="100%" height="800px"></iframe>
-    </div>
 </div>
+
+<a href="#topOfPage" class="scrollButton"><iconify-icon icon="mdi:arrow-top-drop-circle-outline" width="48" height="48" style="color: white"></iconify-icon></a>
+<div class="projBar">
+    <a href="Proj/art.html" class="glightbox image-container">
+        <img src="/assets/img/deadline_droids_cover.png" alt="Image 1"/>
+    </a>
+    <a href="Proj/music.html" class="glightbox image-container">
+        <img src="/assets/img/deadline_droids_cover.png" alt="Image 1"/>
+    </a>
+    <a href="Proj/code.html" class="glightbox image-container">
+        <img src="/assets/img/deadline_droids_cover.png" alt="Image 1"/>
+    </a>
+    <a href="Proj/code.html"  onclick="openGallery()" class="glightbox image-container">
+        <img src="/assets/img/deadline_droids_cover.png"/>
+    </a>
+</div>
+
+
+<!-- zie https://github.com/biati-digital/glightbox voor meer properties -->
+<script type="module">
+    import 'https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js';
+    const lightbox = GLightbox({
+        height: '100vh',
+    });
+    const myGallery = GLightbox({
+        elements: [
+            {
+                'href': 'https://picsum.photos/1200/800',
+                'type': 'image',
+                'title': 'My Title',
+                'description': 'Example',
+            },
+            {
+                'href': 'https://picsum.photos/1200/800',
+                'type': 'image',
+                'alt': 'image text alternatives'
+            },
+            {
+                'href': 'https://www.youtube.com/watch?v=Ga6RYejo6Hk',
+                'type': 'video',
+                'source': 'youtube', //vimeo, youtube or local
+                'width': 900,
+            },
+            {
+                'content': '<p>This will append some html inside the slide</p>' // read more in the API section
+            },
+            {
+                'content': document.getElementById('inline-example') // this will append a node inside the slide
+            },
+        ],
+        autoplayVideos: true,
+    });
+
+    function openGallery() {
+        myGallery.open();
+    }
+</script>
 <script src="/assets/js/app.js"></script>
 <script src="https://code.iconify.design/iconify-icon/2.0.0/iconify-icon.min.js"></script>
 </body>

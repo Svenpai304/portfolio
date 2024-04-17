@@ -1,12 +1,43 @@
+//projectBars
+.projBg{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -10;
+  background-image: url('/assets/img/background_tile.png');
+}
+
+.projUnderline{
+  background-color: #282828;
+  padding: 5px 0;
+}
+
+.projBar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+//project Images
+.glightbox.image-container img {
+  width: 325px;
+  aspect-ratio: 18 / 13;
+  object-fit: cover;
+}
+
 .image-container img {
   width: 900px;
   height: 650px;
   object-fit: cover;
+  margin: 5px;
 }
 
 .image-container {
   margin-bottom: 20px;
-
+  
   & img {
     width: 100%;
     height: auto;
@@ -20,6 +51,7 @@
   }
 }
 
+//scroll button
 #topOfPage {
   bottom: 0;
 }
