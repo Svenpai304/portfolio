@@ -1,81 +1,69 @@
 <!DOCTYPE html>
 <html lang="en">
 
-  <head>
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DrRon's Portfolio Website</title>
-    <link rel="icon" href="https://i.gifer.com/6oa.gif" sizes="16x16" />
+    <link rel="icon" href="https://i.gifer.com/6oa.gif" sizes="16x16"/>
     <link rel="stylesheet" href="/assets/css/app.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" />
-  </head>
+</head>
 
-  <body class="defaultTheme">
+<body class="defaultTheme" id="topOfPage">
 
-    <div class="navigateBar">
-      <div class="pageButtons">
+<div class="navigateBar">
+    <div class="pageButtons">
         <a href="./index.html" class="disabled">
-          <iconify-icon icon="iconamoon:home-fill" width="16" height="16"></iconify-icon> Home
+            <iconify-icon icon="iconamoon:home-fill" width="16" height="16"></iconify-icon>
+            Home
         </a>
         <a href="./about.html">
-          <iconify-icon icon="mdi:about-circle-outline" width="16" height="16"></iconify-icon> About
+            <iconify-icon icon="mdi:about-circle-outline" width="16" height="16"></iconify-icon>
+            About
         </a>
         <a href="./projects.html">
-          <iconify-icon icon="material-symbols:work-outline" width="16" height="16"></iconify-icon> Projects
+            <iconify-icon icon="material-symbols:work-outline" width="16" height="16"></iconify-icon>
+            Projects
         </a>
         <a href="./contact.html">
-          <iconify-icon icon="mdi:contact" width="16" height="16"></iconify-icon> Contact
+            <iconify-icon icon="mdi:contact" width="16" height="16"></iconify-icon>
+            Contact
         </a>
-      </div>
     </div>
+</div>
 
-    <div class="banner">
-      <h1>Portfolio DrRon</h1>
-      <h3>Game Developer and Music Enthusiast</h3>
-      <img src="/assets/img/drron_home.png" alt="home image" width="150">
-    </div>
+<div class="banner">
+    <h1>Portfolio DrRon</h1>
+    <h3>Game Developer and Music Enthusiast</h3>
+    <img src="/assets/img/drron_home.png" alt="home image" width="150">
+</div>
 
-    xxxxxxxxxxxxxxxxxxx
-    <div class="test">
-      <!-- de class lightbox is belangrijk, zo vindt het script de link om een lightbox erop te zetten -->
-
-      <a href="Proj/music.html" class="glightbox">
-        <img src="/assets/img/deadline_droids_cover.png" alt="Image 1" style="width:200px;aspect-ratio: 19 / 9;object-fit: cover;" />
-      </a>
-    </div>
-    xxxxxxxxxxxxxxxxxxx
-    <div class="container">
-      <br>
-      <div class="textBarL">
-        <div class="titleBarL">
-          <div class="title">Welcome Message</div>
+<div class="container">
+    <br>
+    <div class="textBar">
+        <div class="titleBar">
+            <div class="title">Welcome Message</div>
         </div>
         <div class="text">
-          Welcome to my portfolio page. On this website I will present myself, my work and how you can be in direct
-          contact with me.
+            Welcome to my portfolio page. On this website I will present myself, my work and how you can be in direct
+            contact with me. Feel free to look around!
         </div>
-      </div>
-      <div class="textBar">
-        <div class="titleBar">
-          <h2 class="title">Visitor Count</h2>
-          <img src="https://count.getloli.com/get/@:drron">
-        </div>
-      </div>
     </div>
-    <!-- zie https://github.com/biati-digital/glightbox voor meer properties -->
-    <script type="module">
+    <div class="textBar">
+        <div class="titleBar">
+            <h1 class="title">Visitor Count</h1>
+            <img src="https://count.getloli.com/get/@:drron">
+        </div>
+    </div>
+</div>
 
-      import 'https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js';
-      const lightbox = GLightbox({
-        height: '100vh',
+<a href="#topOfPage" class="scrollButton">
+    <iconify-icon icon="mdi:arrow-top-drop-circle-outline" width="48" height="48" style="color: white"></iconify-icon>
+</a>
 
-      });
-    </script>
+<script src="/assets/js/app.js"></script>
+<script src="https://code.iconify.design/iconify-icon/2.0.0/iconify-icon.min.js"></script>
 
-
-    <script src="/assets/js/app.js"></script>
-    <script src="https://code.iconify.design/iconify-icon/2.0.0/iconify-icon.min.js"></script>
-
-  </body>
+</body>
 
 </html>

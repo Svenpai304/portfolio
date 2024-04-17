@@ -1,16 +1,3 @@
-// function changeIframeSrc(src) {
-//   document.getElementById('iframeContent').src = src;
-//   document.querySelectorAll('.selectButton a').forEach(button => {
-//     button.classList.remove('disabled');
-//   });
-//   document.getElementById(`${src.split('/')[1].split('.')[0]}Btn`).classList.add('disabled');
-// }
-
-// function adjustIframeHeight() {
-//   var iframe = document.getElementById('iframeContent');
-//   iframe.style.height = iframe.contentWindow.document.body.scrollHeight + 'px';
-// }
-
 window.addEventListener('scroll', function () {
   var button = document.querySelector('.scrollButton');
   if (window.scrollY < 100) {
@@ -30,10 +17,10 @@ document.addEventListener('DOMContentLoaded', function() {
   let positionX = 0;
   let positionY = 0;
   //direction
-  let directionX = -1;
-  let directionY = 1;
+  let directionX = 1;
+  let directionY = -1;
   //speed
-  let speed = 0.1;
+  let speed = .3;
 
   function moveBackground() {
     positionX += speed * directionX;

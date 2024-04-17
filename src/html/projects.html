@@ -44,19 +44,31 @@
     </div>
 </div>
 
-<a href="#topOfPage" class="scrollButton"><iconify-icon icon="mdi:arrow-top-drop-circle-outline" width="48" height="48" style="color: white"></iconify-icon></a>
-<div class="projBar">
+<a href="/projects.html#topOfPage" class="scrollButton"><iconify-icon icon="mdi:arrow-top-drop-circle-outline" width="48" height="48" style="color: white"></iconify-icon></a>
+<div class="projBar projContainer">
     <a href="Proj/art.html" class="glightbox image-container">
-        <img src="/assets/img/deadline_droids_cover.png" alt="Image 1"/>
+        <img src="/assets/img/thumbnails/appdev.png" alt="Image 1"/>
     </a>
     <a href="Proj/music.html" class="glightbox image-container">
-        <img src="/assets/img/deadline_droids_cover.png" alt="Image 1"/>
+        <img src="/assets/img/thumbnails/context1.png" alt="Image 1"/>
     </a>
     <a href="Proj/code.html" class="glightbox image-container">
-        <img src="/assets/img/deadline_droids_cover.png" alt="Image 1"/>
+        <img src="/assets/img/thumbnails/bpw1.png" alt="Image 1"/>
     </a>
-    <a href="Proj/code.html"  onclick="openGallery()" class="glightbox image-container">
-        <img src="/assets/img/deadline_droids_cover.png"/>
+    <a href="Proj/code.html" class="glightbox image-container">
+        <img src="/assets/img/thumbnails/bpw2.png"/>
+    </a>
+    <a href="Proj/code.html" class="glightbox image-container">
+        <img src="/assets/img/thumbnails/batch.png"/>
+    </a>
+    <a href="Proj/code.html" class="glightbox image-container">
+        <img src="/assets/img/thumbnails/minesweeperjs.png"/>
+    </a>
+    <a href="Proj/code.html" class="glightbox image-container">
+        <img src="/assets/img/thumbnails/waterbottle.png"/>
+    </a>
+    <a href="Proj/code.html" class="glightbox image-container">
+        <img src="/assets/img/bossproject.gif" alt="/assets/img/thumbnails/bossold.png"/>
     </a>
 </div>
 
@@ -67,38 +79,6 @@
     const lightbox = GLightbox({
         height: '100vh',
     });
-    const myGallery = GLightbox({
-        elements: [
-            {
-                'href': 'https://picsum.photos/1200/800',
-                'type': 'image',
-                'title': 'My Title',
-                'description': 'Example',
-            },
-            {
-                'href': 'https://picsum.photos/1200/800',
-                'type': 'image',
-                'alt': 'image text alternatives'
-            },
-            {
-                'href': 'https://www.youtube.com/watch?v=Ga6RYejo6Hk',
-                'type': 'video',
-                'source': 'youtube', //vimeo, youtube or local
-                'width': 900,
-            },
-            {
-                'content': '<p>This will append some html inside the slide</p>' // read more in the API section
-            },
-            {
-                'content': document.getElementById('inline-example') // this will append a node inside the slide
-            },
-        ],
-        autoplayVideos: true,
-    });
-
-    function openGallery() {
-        myGallery.open();
-    }
 </script>
 <script src="/assets/js/app.js"></script>
 <script src="https://code.iconify.design/iconify-icon/2.0.0/iconify-icon.min.js"></script>
