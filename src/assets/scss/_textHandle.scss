@@ -1,0 +1,45 @@
+.title{
+  font-family: Questrial, sans-serif;
+  font-size: 40px;
+  color: white;
+}
+
+.titleBar {
+  background-color: #141414;
+  border-radius: 20px;
+  text-align: center;
+  padding-left: 12px;
+}
+
+.titleBarL {
+  @extend .titleBar;
+  text-align: left;
+}
+
+.text{
+  font-family: Questrial, sans-serif;
+  color: white;
+  font-size: 24px;
+  margin-top: 15px;
+}
+
+.textBar {
+  text-align: center;
+  margin:10px;
+}
+
+.textBarL {
+  text-align: left;
+}
+
+.listText {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: left;
+}
+
+.listText ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
