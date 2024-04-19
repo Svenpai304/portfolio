@@ -25,6 +25,7 @@
             Contact</a>
     </div>
 </div>
+
 <div class="banner">
     <h1>Projects</h1>
 </div>
@@ -47,45 +48,110 @@
 <a href="/projects.html#topOfPage" class="scrollButton">
     <iconify-icon icon="mdi:arrow-top-drop-circle-outline" width="48" height="48" style="color: white"></iconify-icon>
 </a>
+
 <div class="projContainer">
+    <br>
     <div class="projBar">
         <a href="#appDevId" class="glightbox image-wrapper">
             <img src="/assets/img/thumbnails/appdev.png" class="static-image"/>
             <img src="/assets/img/thumbnails/gifs/appdev.gif" alt="gif of appdev" class="gif-image"/>
         </a>
+        <a href="#bpw2Id" class="glightbox image-wrapper">
+            <img src="/assets/img/thumbnails/bpw2.png"/>
+        </a>
+        <a href="#context1Id" class="glightbox image-wrapper">
+            <img src="/assets/img/thumbnails/context1.png"/>
+        </a>
+        <a href="#roots" class="glightbox image-wrapper">
+            <img src="/assets/img/thumbnails/roots.png"/>
+        </a>
+        <a href="#bpw1Id" class="glightbox image-wrapper">
+            <img src="/assets/img/thumbnails/bpw1.png"/>
+        </a>
+        <a href="#ecttp" class="glightbox image-wrapper">
+            <img src="/assets/img/thumbnails/ecttp.png"/>
+        </a>
+        <a href="#projectplay" class="glightbox image-wrapper">
+            <img src="/assets/img/thumbnails/projectplay.png"/>
+        </a>
+        
+        <a href="#gamejam4Id" class="glightbox image-wrapper">
+            <img src="/assets/img/thumbnails/gamejam4.png"/>
+        </a>
+        <a href="#gamejam3Id" class="glightbox image-wrapper">
+            <img src="/assets/img/thumbnails/gamejam3.png"/>
+        </a>
+        <a href="#gamejam2Id" class="glightbox image-wrapper">
+            <img src="/assets/img/thumbnails/gamejam2.png"/>
+        </a>
+        <a href="#gamejam1Id" class="glightbox image-wrapper">
+            <img src="/assets/img/thumbnails/gamejam1.png"/>
+        </a>
+        <a href="#levenswegId" class="glightbox image-wrapper">
+            <img src="/assets/img/thumbnails/levensweg.png"/>
+        </a>
+        <a href="#minesweeperId" class="glightbox image-wrapper">
+            <img src="/assets/img/thumbnails/minesweeperjs.png"/>
+        </a>
+        <a href="#techclicker" class="glightbox image-wrapper">
+            <img src="/assets/img/thumbnails/techclicker.png"/>
+        </a>
         <a href="#bossoldId" class="glightbox image-wrapper">
             <img src="/assets/img/thumbnails/bossold.png" class="static-image"/>
             <img src="/assets/img/thumbnails/gifs/bossold.gif" alt="gif of an old boss" class="gif-image"/>
+        </a>
+        <a href="#waterbottle" class="glightbox image-wrapper">
+            <img src="/assets/img/thumbnails/waterbottle.png"/>
+        </a>
+        <a href="#pianoarduino" class="glightbox image-wrapper">
+            <img src="/assets/img/thumbnails/pianoarduino.png"/>
+        </a>
+        <a href="#batchId" class="glightbox image-wrapper">
+            <img src="/assets/img/thumbnails/batch.png"/>
         </a>
     </div>
 </div>
 
 <!-- light boxes -->
-<div id="appDevId" style="display: none">
-    <h1>App development</h1> <br>
-    This was a project from my first year in game development. I learned how to work with the .NET MAUI framework and
-    gained insight into app development. What I also noticed was that games aren't ideally suited for being apps because
-    apps aren't designed for continuous update loops, but rather for executing actions based on user interactions
-    through events. <br> <br>
+<div class="lightbox-overlay" id="appDevId" style="display: none">
+    <div class="lightbox-title lightbox-align center">
+        <h1>App development</h1>
+    </div>
+    <br>
+    <div class="lightbox-text lightbox-align left">
+        This was a project from my first year in game development. I learned how to work with the .NET MAUI
+        framework and gained insight into app development. What I also noticed was that games aren't ideally suited for
+        being apps
+        because apps aren't designed for continuous update loops, but rather for executing actions based on user
+        interactions through events. <br> <br>
 
-    For this assignment, we had to make one of those Tamagotchi games. The requirements were that the pet had to make a
-    Tamagotchi app with the .NET MAUI framework, where we could take care of our pet daily. The pet can get hungry, then
-    it needs food; thirsty, then it needs a drink; bored, then it needs attention; lonely, then it needs affection;
-    overstimulated and tired. For the assignment, I wanted to make a fun game that the user would enjoy. On the main
-    screen, you can input the name of your pet, which will then be stored in the database and synced with it. You can
-    also press the delete button to remove your pet. <br> <br>
+        For this assignment, we had to make one of those Tamagotchi games. The requirements were that the pet had to
+        make a Tamagotchi app with the .NET MAUI framework, where we could take care of our pet daily. The pet can get
+        hungry, then it needs food; thirsty, then it needs a drink; bored, then it needs attention; lonely, then it
+        needs
+        affection; overstimulated and tired. For the assignment, I wanted to make a fun game that the user would enjoy.
+        On the
+        main
+        screen, you can input the name of your pet, which will then be stored in the database and synced with it.
+        You
+        can
+        also press the delete button to remove your pet. <br> <br>
 
-    For the layout, I designed each page to display the values the pet needs, with a status text at the top and the
-    current pet needs listed at the bottom. You can navigate between each page from any other page. I ensured that the
-    app is scalable for different resolutions and assigned a distinctive color to each value of the pet's needs. Food is
-    red / brown, drinks are blue, tired / sleep is dark green dark because of night time, pink is for love I switched
-    that from the stimulated value because i found that funny, orange is energetic fits well with gaming and 
-    for arcade, and purple is loneliness I choose this because its an mysterious emotion and color.
-    <br> <br>
-    
-
+        For the layout, I designed each page to display the values the pet needs, with a status text at the top and
+        the
+        current pet needs listed at the bottom. You can navigate between each page from any other page. I ensured
+        that
+        the
+        app is scalable for different resolutions and assigned a distinctive color to each value of the pet's needs.
+        Food is
+        red / brown, drinks are blue, tired / sleep is dark green dark because of night time, pink is for love I
+        switched
+        that from the stimulated value because i found that funny, orange is energetic fits well with gaming and
+        for arcade, and purple is loneliness I choose this because its an mysterious emotion and color.
+        <br> <br>
+    </div>
 </div>
-<div id="bossold" style="display: none">
+<div id="bossoldId" style="display: none">
     <div class="textBar">
         <h1>App development</h1>
         here is some more text

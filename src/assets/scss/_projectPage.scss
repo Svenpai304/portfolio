@@ -53,7 +53,11 @@
   }
   
   &:hover .gif-image {
-    transform: translateY(0%) scale(1.1);
+    transform: translateY(0%);
+  }
+  
+  &:hover {
+    transform: scale(1.008);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     filter: brightness(80%);
   }
@@ -80,4 +84,10 @@
   & iconify-icon {
     transform: translateY(5px);
   }
+}
+
+//filter feature
+.filter-controls {
+  font-family: Questrial, sans-serif;
+  color: white;
 }

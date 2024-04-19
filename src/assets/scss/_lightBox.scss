@@ -1,0 +1,25 @@
+.lightbox-overlay {
+  margin: 10px 50px;  
+}
+
+.lightbox-align{
+  &.center{
+    text-align: center;
+  }
+  &.left{
+    text-align: left;
+  }
+}
+
+.lightbox-title {
+  font-family: Outfit, sans-serif;
+  font-size: 40px;
+  color: black;
+}
+
+.lightbox-text {
+  font-family: Questrial, sans-serif;
+  color: black;
+  font-size: 20px;
+  margin-top: 15px;
+}
