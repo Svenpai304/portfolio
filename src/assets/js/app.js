@@ -45,13 +45,15 @@ document.addEventListener('DOMContentLoaded', function() {
   moveBackground();
 });
 
-
+//scrollbutton
 window.addEventListener('scroll', function() {
   var button = document.querySelector('.scrollButton');
   if (window.scrollY < 100) {
     button.style.opacity = '0';
+    button.style.cursor = 'default';
   } else {
     button.style.opacity = '1';
+    button.style.cursor = 'pointer';
   }
 });
 
