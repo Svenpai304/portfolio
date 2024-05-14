@@ -26,6 +26,7 @@
     "browser-sync": "^3.0.2",
     "cssnano": "^6.1.2",
     "gulp": "^5.0.0",
+    "gulp-changed": "^5.0.2",
     "gulp-clean": "^0.4.0",
     "gulp-concat": "^2.6.1",
     "gulp-imagemin": "^9.0.0",
@@ -38,7 +39,8 @@
   },
   "dependencies": {
     "bootstrap": "^5.3.3",
-    "gulp-cli": "^3.0.0"
+    "gulp-cli": "^3.0.0",
+    "pump": "^3.0.0"
   },
   "volta": {
     "node": "18.20.2"

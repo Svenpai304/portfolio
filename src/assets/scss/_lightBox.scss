@@ -1,20 +1,24 @@
 .lightbox-overlay {
-  margin: 10px 50px;  
+  margin: 10px 50px;
+  background-color: rgba(255, 255, 255, 0.9); /* Light background color */
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow */
 }
 
-.lightbox-align{
-  &.center{
-    text-align: center;
-  }
-  &.left{
-    text-align: left;
-  }
+.lightbox-align.center {
+  text-align: center;
+}
+
+.lightbox-align.left {
+  text-align: left;
 }
 
 .lightbox-title {
   font-family: Outfit, sans-serif;
   font-size: 40px;
   color: black;
+  margin-bottom: 10px;
 }
 
 .lightbox-text {
