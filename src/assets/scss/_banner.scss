@@ -1,10 +1,13 @@
 .banner {
-  background-color: #3d3d3d;
   padding: 20px 0;
-  text-align: center;
+  position: relative;
+  overflow: hidden;
+  
+  /* Text   */
   color: white;
   font-family: 'Outfit', sans-serif;
-  position: relative;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  text-align: center;
 
   & h1 {
     font-family: 'Outfit', sans-serif;
@@ -23,4 +26,18 @@
 .prjbanner {
   @extend .banner;
   background-color: transparent;
+}
+
+.banner::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-image: url('/assets/img/background.png');
+  background-position: center 70%;
+  background-size: cover;
+  filter: blur(2px); /* Adjust the blur amount */
+  z-index: -1; /* Ensure the pseudo-element is behind other content */
 }
