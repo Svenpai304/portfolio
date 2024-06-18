@@ -21,6 +21,7 @@ const files = {
     jsPath: 'src/assets/js/**/*.js',
     htmlPath: 'src/html/**/*.html',
     imgPath: 'src/assets/img/**/*.{jpg,jpeg,png,svg,gif}',
+    audioPath: 'src/assets/audio/**/*.{mp3,ogg,wav,flac}',
 };
 
 function scssTask(cb) {
@@ -92,6 +93,12 @@ function htmlTask(cb) {
         .on('end', cb);
 }
 
+function audioTask(cb) {
+    return src(files.audioPath, { encoding: false })
+        .pipe(dest('docs/assets/audio/'))
+        .on('end', cb);
+}
+
 function cacheBustTask(cb) {
     var cbString = new Date().getTime();
     return src(['src/html/index.html'])
@@ -124,12 +131,13 @@ function watchTask(cb) {
     watch(files.jsPath).on('all', gulp.series(jsTask, browserSyncReload));
     watch(files.htmlPath).on('all', gulp.series(htmlTask, cacheBustTask, browserSyncReload));
     watch(files.imgPath).on('all', gulp.series('images', browserSyncReload));
+    watch(files.audioPath).on('all', gulp.series(audioTask, browserSyncReload));
     watch('docs/**/*.html').on('all', browserSyncReload);
     cb();
 }
 
 export default series(
-    parallel(scssTask, jsTask, htmlTask, 'images'),
+    parallel(scssTask, jsTask, htmlTask, 'images', audioTask),
     cacheBustTask,
     browserSyncServe,
     watchTask

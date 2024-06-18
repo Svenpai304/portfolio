@@ -1,4 +1,7 @@
-//projectBars
+/******************/
+/* PROJECT BARS    */
+/******************/
+
 .projBg {
   background-color: #282828;
   position: absolute;
@@ -15,59 +18,108 @@
   padding: 5px 0;
 }
 
-.projBar {
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+.projList {
+  justify-content: left;
   align-items: center;
 }
 
-//image wrapper
+/******************/
+/* PROJECT ITEMS   */
+/******************/
+
+.projItem {
+  width: 100%;
+  
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: rgba(30, 30, 30, 0.8); /* Adjust transparency here */
+  transition: box-shadow 0.3s ease;
+}
+
+.projItem:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
 .image-wrapper {
   position: relative;
   width: 350px;
+  height: auto;
   aspect-ratio: 18 / 13;
-  
   overflow: hidden;
   border-radius: 10px;
   margin: 5px;
 
-  img {
+  & img {
     width: 100%;
-    cursor: pointer;
+    height: 100%;
     object-fit: cover;
-    transition: filter 0.3s;
-  }
+    transition: transform 0.3s ease;
 
-  .static-image {
-    z-index: 1;
-  }
+    & .static-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 1;
+    }
 
-  .gif-image {
-    z-index: 2;
-    transform: translateY(100%);
-    position: absolute;
-    left: 0;
-    top: 0;
+    & .gif-image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 2;
+      transform: translateY(100%);
+      transition: transform 0.3s ease;
+    }
   }
+}
+
+.image-wrapper:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  filter: brightness(70%);
   
-  &:hover .gif-image {
+  & .gif-image {
     transform: translateY(0%);
   }
+}
+
+.projDetails {
+  flex: 1;
+  padding-right: 20px;
   
-  &:hover {
-    transform: scale(1.01);
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
-    filter: brightness(70%);
+  & h2 {
+    margin: 8px 0;
+    color: #ffffff;
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.8); /* Adding text shadow */
+  }
+  
+  & p {
+    margin: 5px 0;
+    color: #c7c7c7;
+  }
+  
+  & .details-link {
+    color: #0298ef;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+    display: inline-block;
+    margin-top: 10px;
+  }
+  
+  & .details-link:hover {
+    color: #ffffff;
   }
 }
 
-//scroll button
-#topOfPage {
-  bottom: 0;
-}
+/******************/
+/* SCROLL BUTTON   */
+/******************/
 
 .scrollButton {
   vertical-align: bottom;
@@ -89,8 +141,36 @@
   }
 }
 
-//filter feature
-.filter-controls {
-  font-family: Questrial, sans-serif;
+/******************/
+/* MUSIC STUFF     */
+/******************/
+
+.spotifyAlbum {
+  aspect-ratio: 18 / 13;
+  position: relative;
+  width: 500px;
+  height: auto;
+  margin: 5px;
+}
+
+.musicFile {
   color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  
+  &  audio {
+    margin-top: 5px;
+  }
+}
+
+.albumContainer {
+  
+}
+
+.musicFilesContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
 }
