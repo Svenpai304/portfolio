@@ -13,7 +13,9 @@ foreach ($children as $doc) {
   $item = array(
     'id' => $doc->get('id'),
     'pagetitle' => $doc->get('pagetitle'),
-    'contributors' => $doc->getTVvalue('Contributers')
+    'contributors' => $doc->getTVvalue('Contributers'),
+    'date' => $doc-> getTVvalue('date'),
+    'technologies' => $doc->getTVvalue('technologies')
   );
   $item = $modx->getChunk('portfolioItem', $item);
   array_push($ret, $item);
