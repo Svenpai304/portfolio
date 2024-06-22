@@ -48,24 +48,53 @@
     <iconify-icon icon="mdi:arrow-top-drop-circle-outline" width="48" height="48" style="color: white"></iconify-icon>
 </a>
 
-<div class="projContainer">
+<div class="projContainer" id="projectsContainer">
+    <div class="projList">
+        <!-- Projects will be injected here -->
+    </div>
+</div>
+
+<script>
+    // Function to create project HTML
+    function createProjectHTML(project) {
+        return `
+            <div class="projItem">
+                <div class="projDetails">
+                    <h2>${project.name}</h2>
+                    <p><strong><iconify-icon icon="uiw:date" width="24px" height="24px" class="textIcons"></iconify-icon> Date:</strong> ${project.date}</p>
+                    <p><strong><iconify-icon icon="svg-spinners:clock" width="24px" height="24px" class="textIcons"></iconify-icon> Time: </strong> ${project.duration}</p>
+                    <p><strong><iconify-icon icon="ic:baseline-people" width="24px" height="24px" class="textIcons"></iconify-icon> Contributors:</strong> ${project.people}</p>
+                    <p><strong><iconify-icon icon="carbon:cics-program" width="24px" height="24px" class="textIcons"></iconify-icon> Tech used:</strong> ${project.techUsed.join(', ')}</p>
+                    <a href="${project.detailsLink}" class="glightbox details-link">More Details</a>
+                </div>
+                <a href="${project.detailsLink}" class="glightbox image-wrapper">
+                    <img src="${project.staticImage}" class="static-image" />
+                    <img src="${project.gifImage}" class="gif-image"/>
+                </a>
+            </div>
+        `;
+    }
+
+    // Fetch the JSON file and generate the projects
+    fetch('./assets/json/projects.json')
+        .then(response => {
+            console.log('Fetch response:', response);
+            return response.json();
+        })
+        .then(projects => {
+            console.log('Projects fetched:', projects);
+            const projectsContainer = document.getElementById('projectsContainer');
+            projects.forEach(project => {
+                projectsContainer.innerHTML += createProjectHTML(project);
+            });
+        })
+        .catch(error => console.error('Error fetching projects:', error));
+</script>
+
+<!--<div id="projectsContainer" class="projContainer">
     <br>
     <div class="projList">
-        <!--op hku-->  <!--yr 2-->
         
-        <div class="projItem">
-            <div class="projDetails">
-                <h2>{Project Hybrid}</h2>
-                <p><strong>Date:</strong>{ 28/01/2024}</p>
-                <p><strong>Contributors:</strong>{ Group of 6}</p>
-                <p><strong>Technologies:</strong>{ Unity, C#, Arduino}</p>
-                <a href="{#hybridId}" class="glightbox details-link">More Details</a>
-            </div>
-            <a href="#hybridId" class="glightbox image-wrapper">
-                <img src="{/assets/img/thumbnails/hybrid.png}" class="static-image" />
-                <img src="{/assets/img/thumbnails/gifs/hybrid.gif}" class="gif-image"/>
-            </a>
-        </div>
         
         <div class="projItem">
             <div class="projDetails">
@@ -80,6 +109,7 @@
                 <img src="/assets/img/thumbnails/gifs/hybrid.gif" class="gif-image"/>
             </a>
         </div>
+        
         <div class="projItem">
             <div class="projDetails">
                 <h2>App Development</h2>
@@ -105,7 +135,7 @@
                 <img src="/assets/img/thumbnails/gifs/architecture.gif" class="gif-image"/>
             </a>
         </div>
-        <!--yr 1-->
+        &lt;!&ndash;yr 1&ndash;&gt;
         <div class="projItem">
             <div class="projDetails">
                 <h2>C++ Basics</h2>
@@ -144,61 +174,7 @@
                 <img src="/assets/img/thumbnails/gifs/architecture.gif" class="gif-image"/>
             </a>
         </div>
-        <div class="projItem">
-            <div class="projDetails">
-                <h2>Game Architecture</h2>
-                <p><strong>Date:</strong> 28/01/2024</p>
-                <p><strong>Contributors:</strong> Group of 2</p>
-                <p><strong>Technologies:</strong> Unity, C# </p>
-                <a href="#appDevId" class="details-link">More Details</a>
-            </div>
-            <a href="#architectureId" class="glightbox image-wrapper">
-                <img src="/assets/img/thumbnails/architecture.png" class="static-image"/>
-                <img src="/assets/img/thumbnails/gifs/architecture.gif" class="gif-image"/>
-            </a>
-        </div>
-        <div class="projItem">
-            <div class="projDetails">
-                <h2>Game Architecture</h2>
-                <p><strong>Date:</strong> 28/01/2024</p>
-                <p><strong>Contributors:</strong> Group of 2</p>
-                <p><strong>Technologies:</strong> Unity, C# </p>
-                <a href="#appDevId" class="details-link">More Details</a>
-            </div>
-            <a href="#architectureId" class="glightbox image-wrapper">
-                <img src="/assets/img/thumbnails/architecture.png" class="static-image"/>
-                <img src="/assets/img/thumbnails/gifs/architecture.gif" class="gif-image"/>
-            </a>
-        </div>
-        <div class="projItem">
-            <div class="projDetails">
-                <h2>Game Architecture</h2>
-                <p><strong>Date:</strong> 28/01/2024</p>
-                <p><strong>Contributors:</strong> Group of 2</p>
-                <p><strong>Technologies:</strong> Unity, C# </p>
-                <a href="#appDevId" class="details-link">More Details</a>
-            </div>
-            <a href="#architectureId" class="glightbox image-wrapper">
-                <img src="/assets/img/thumbnails/architecture.png" class="static-image"/>
-                <img src="/assets/img/thumbnails/gifs/architecture.gif" class="gif-image"/>
-            </a>
-        </div>
-        <div class="projItem">
-            <div class="projDetails">
-                <h2>Game Architecture</h2>
-                <p><strong>Date:</strong> 28/01/2024</p>
-                <p><strong>Contributors:</strong> Group of 2</p>
-                <p><strong>Technologies:</strong> Unity, C# </p>
-                <a href="#appDevId" class="details-link">More Details</a>
-            </div>
-            <a href="#architectureId" class="glightbox image-wrapper">
-                <img src="/assets/img/thumbnails/architecture.png" class="static-image"/>
-                <img src="/assets/img/thumbnails/gifs/architecture.gif" class="gif-image"/>
-            </a>
-        </div>
-    </div>
-    <div class="projList">
-        
+
         <a href="#bpw2Id" class="glightbox image-wrapper">
             <img src="/assets/img/thumbnails/bpw2.png" class="static-image"/>
             <img src="/assets/img/thumbnails/gifs/bpw2.gif" class="gif-image"/>
@@ -218,9 +194,7 @@
         <a href="#projectplayId" class="glightbox image-wrapper">
             <img src="/assets/img/thumbnails/projectplay.png"/>
         </a>
-    </div>
-    <div class="projList">
-        <!--voor hku-->
+
         <a href="#gamejam4Id" class="glightbox image-wrapper">
             <img src="/assets/img/thumbnails/gamejam4.png"/>
         </a>
@@ -257,7 +231,7 @@
         </a>
     </div>
     <div id="code"></div>
-</div>
+</div>-->
 
 <!-- light boxes -->
 <div class="lightbox-overlay" id="hybridId" style="display: none">
@@ -426,54 +400,53 @@
     <div class="albumContainer">
         <iframe style="border-radius:12px"
                 src="https://open.spotify.com/embed/album/6ZLXJIHj83BsDa9oyVgWy4?utm_source=generator"
-                class="spotifyAlbum" frameBorder="0" allowfullscreen=""
+                frameBorder="0" allowfullscreen=""
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                 loading="lazy"></iframe>
         <iframe style="border-radius:12px"
                 src="https://open.spotify.com/embed/album/22eym9hhmSGZr1kezJH1rR?utm_source=generator"
-                class="spotifyAlbum" frameBorder="0" allowfullscreen=""
+                frameBorder="0" allowfullscreen=""
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                 loading="lazy"></iframe>
         <iframe style="border-radius:12px"
                 src="https://open.spotify.com/embed/album/5Usf8KWpg0gJ9rOcnyBV1U?utm_source=generator"
-                class="spotifyAlbum" frameBorder="0" allowfullscreen=""
+                frameBorder="0" allowfullscreen=""
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                 loading="lazy"></iframe>
         <iframe style="border-radius:12px"
                 src="https://open.spotify.com/embed/album/3Jr0Rf1oIYNxwgEoclcwPz?utm_source=generator"
-                class="spotifyAlbum" frameBorder="0" allowfullscreen=""
+                frameBorder="0" allowfullscreen=""
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                 loading="lazy"></iframe>
         <iframe style="border-radius:12px"
                 src="https://open.spotify.com/embed/album/1BHS6TqjW01wn8v4zy801c?utm_source=generator"
-                class="spotifyAlbum" frameBorder="0" allowfullscreen=""
+                frameBorder="0" allowfullscreen=""
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                 loading="lazy"></iframe>
         <iframe style="border-radius:12px"
                 src="https://open.spotify.com/embed/album/1zUWA3LCreEjvGITd1tyPV?utm_source=generator"
-                class="spotifyAlbum" frameBorder="0" allowfullscreen=""
+                frameBorder="0" allowfullscreen=""
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                 loading="lazy"></iframe>
         <iframe style="border-radius:12px"
                 src="https://open.spotify.com/embed/album/5WX15YRu43deMnOPY2HpAD?utm_source=generator"
-                class="spotifyAlbum" frameBorder="0" allowfullscreen=""
+                frameBorder="0" allowfullscreen=""
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                 loading="lazy"></iframe>
         <iframe style="border-radius:12px"
                 src="https://open.spotify.com/embed/album/6qXkmfhJnl2inH23XP0gX0?utm_source=generator"
-                class="spotifyAlbum" frameBorder="0" allowfullscreen=""
+                frameBorder="0" allowfullscreen=""
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                 loading="lazy"></iframe>
         <iframe style="border-radius:12px"
                 src="https://open.spotify.com/embed/album/1jl02AY4QCHFIwIMjopu7n?utm_source=generator"
-                class="spotifyAlbum" frameBorder="0" allowfullscreen=""
+                frameBorder="0" allowfullscreen=""
                 allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
                 loading="lazy"></iframe>
     </div>
 
     <div id="MusicPart"></div>
 </div>
-
 
 <div class="lightbox-overlay" id="gamejam4Id" style="display: none">
     <div class="lightbox-title lightbox-align center">

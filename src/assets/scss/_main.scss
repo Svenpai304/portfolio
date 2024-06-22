@@ -22,14 +22,13 @@
 }
 
 .container {
-  max-width: 100%;
+  max-width: 70%;
   margin: 0 auto;
   margin-top: 15px;
 }
 
 .projContainer{
   @extend .container;
-  max-width: 80%;
 
   & h1 {
     font-family: 'Outfit', sans-serif;

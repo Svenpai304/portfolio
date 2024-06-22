@@ -146,11 +146,7 @@
 /******************/
 
 .spotifyAlbum {
-  aspect-ratio: 18 / 13;
-  position: relative;
-  width: 500px;
-  height: auto;
-  margin: 5px;
+
 }
 
 .musicFile {
@@ -165,12 +161,24 @@
 }
 
 .albumContainer {
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 100%;
   
+  & iframe {
+    aspect-ratio: 18 / 13;
+    position: relative;
+    width: 50%;
+    height: auto;
+    margin: 5px;
+  }
 }
 
 .musicFilesContainer {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
   gap: 20px;
 }

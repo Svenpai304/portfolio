@@ -1,0 +1,22 @@
+[
+  {
+    "name": "Project Hybrid",
+    "date": "28/01/2024",
+    "duration": "8 weeks",
+    "people": "Group of 6",
+    "techUsed": ["Unity", "C#", "Arduino"],
+    "detailsLink": "#hybridId",
+    "staticImage": "/assets/img/thumbnails/hybrid.png",
+    "gifImage": "/assets/img/thumbnails/gifs/hybrid.gif"
+  },
+  {
+    "name": "App Development",
+    "date": "28/01/2024",
+    "duration": "8 weeks",
+    "people": "Solo",
+    "techUsed": ["C#", "Yaml", "Json", "MySQL"],
+    "detailsLink": "#hybridId",
+    "staticImage": "/assets/img/thumbnails/appdev.png",
+    "gifImage": "/assets/img/thumbnails/gifs/appdev.gif"
+  }
+]
