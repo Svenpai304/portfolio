@@ -18,5 +18,16 @@
     "detailsLink": "#hybridId",
     "staticImage": "/assets/img/thumbnails/appdev.png",
     "gifImage": "/assets/img/thumbnails/gifs/appdev.gif"
+  },
+  {
+    "name": "Poep",
+    "date": "34230-9u4980ura-9adsfa89df",
+    "duration": "8 weeks",
+    "people": "Solo",
+    "techUsed": ["C#", "Yaml", "Json", "MySQL"],
+    "detailsLink": "#hybridId",
+    "staticImage": "/assets/img/thumbnails/architecture.png",
+    "gifImage": "/assets/img/thumbnails/gifs/architecture.gif"
   }
+  
 ]
