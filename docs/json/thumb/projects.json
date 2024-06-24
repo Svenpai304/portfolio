@@ -1,33 +1,162 @@
 [
   {
-    "name": "Project Hybrid",
-    "date": "28/01/2024",
-    "duration": "8 weeks",
-    "people": "Group of 6",
-    "techUsed": ["Unity", "C#", "Arduino"],
-    "detailsLink": "#hybridId",
-    "staticImage": "/assets/img/thumbnails/hybrid.png",
-    "gifImage": "/assets/img/thumbnails/gifs/hybrid.gif"
+    "name": "C++ Basics",
+    "date": "06/05/2023",
+    "duration": "6 Weeks",
+    "people": "Solo",
+    "techUsed": ["C++", "SFML"],
+    "detailsLink": "",
+    "staticImage": "/assets/img/thumbnails/cppbasics.png",
+    "gifImage": "/assets/img/thumbnails/gifs/cppbasics.gif"
   },
   {
-    "name": "App Development",
-    "date": "28/01/2024",
-    "duration": "8 weeks",
+    "name": "If This Then That",
+    "date": "05/02/2023",
+    "duration": "8 Weeks",
     "people": "Solo",
-    "techUsed": ["C#", "Yaml", "Json", "MySQL"],
-    "detailsLink": "#hybridId",
-    "staticImage": "/assets/img/thumbnails/appdev.png",
-    "gifImage": "/assets/img/thumbnails/gifs/appdev.gif"
+    "techUsed": ["Arduino"],
+    "detailsLink": "",
+    "staticImage": "/assets/img/thumbnails/ittt.png",
+    "gifImage": "/assets/img/thumbnails/gifs/ittt.gif"
   },
   {
-    "name": "Poep",
-    "date": "34230-9u4980ura-9adsfa89df",
-    "duration": "8 weeks",
+    "name": "Deadline Droids",
+    "date": "05/02/2023",
+    "duration": "8 Weeks",
+    "people": "Team of 4",
+    "techUsed": ["Unity", "C#", "Git", "Network"],
+    "detailsLink": "",
+    "staticImage": "/assets/img/thumbnails/context1.png",
+    "gifImage": "/assets/img/thumbnails/gifs/context1.gif"
+  },
+  {
+    "name": "Global Game Jam 2023",
+    "date": "03/02/2023",
+    "duration": "3 Days",
+    "people": "Group of 3",
+    "techUsed": ["Unity", "C#", "Git"],
+    "detailsLink": "",
+    "staticImage": "/assets/img/thumbnails/roots.png",
+    "gifImage": "/assets/img/thumbnails/gifs/roots.gif"
+  },
+  {
+    "name": "Using Arduino For Evil",
+    "date": "22/01/2023",
+    "duration": "2 Weeks",
     "people": "Solo",
-    "techUsed": ["C#", "Yaml", "Json", "MySQL"],
-    "detailsLink": "#hybridId",
-    "staticImage": "/assets/img/thumbnails/architecture.png",
-    "gifImage": "/assets/img/thumbnails/gifs/architecture.gif"
+    "techUsed": ["Arduino"],
+    "detailsLink": "",
+    "staticImage": "/assets/img/thumbnails/arduinoevil.png",
+    "gifImage": "/assets/img/thumbnails/gifs/arduinoevil.gif"
+  },
+  {
+    "name": "Building Playful Worlds 1",
+    "date": "23/12/2022",
+    "duration": "6 Weeks",
+    "people": "Solo",
+    "techUsed": ["Unity", "C#", "Git"],
+    "detailsLink": "",
+    "staticImage": "/assets/img/thumbnails/bpw1.png",
+    "gifImage": "/assets/img/thumbnails/gifs/bpw1.gif"
+  },
+  {
+    "name": "Empowering Creative Thinking Through Programming",
+    "date": "11/09/2022",
+    "duration": "9 Weeks",
+    "people": "Solo",
+    "techUsed": ["Processing", "Java"],
+    "detailsLink": "",
+    "staticImage": "/assets/img/thumbnails/ecttp.png",
+    "gifImage": "/assets/img/thumbnails/gifs/ecttp.gif"
+  },
+  {
+    "name": "Project Play",
+    "date": "04/09/2022",
+    "duration": "10 Weeks",
+    "people": "Solo",
+    "techUsed": ["Unity", "C#"],
+    "detailsLink": "",
+    "staticImage": "/assets/img/thumbnails/projectplay.png",
+    "gifImage": "/assets/img/thumbnails/gifs/projectplay.gif"
+  },
+  {
+    "name": "Wowie Jam 4.0",
+    "date": "12/08/2022",
+    "duration": "3 Days",
+    "people": "Solo",
+    "techUsed": ["Unity", "C#"],
+    "detailsLink": "",
+    "staticImage": "/assets/img/thumbnails/gamejam4.png",
+    "gifImage": "/assets/img/thumbnails/gifs/gamejam4.gif"
+  },
+  {
+    "name": "Brackeys Game Jam 2021.2",
+    "date": "29/08/2021",
+    "duration": "7 Days",
+    "people": "Solo",
+    "techUsed": ["Unity", "C#"],
+    "detailsLink": "",
+    "staticImage": "/assets/img/thumbnails/gamejam3.png",
+    "gifImage": "/assets/img/thumbnails/gifs/gamejam3.gif"
+  },
+  {
+    "name": "Brackeys Game Jam 2021.1",
+    "date": "21/02/2021",
+    "duration": "7 Days",
+    "people": "Solo",
+    "techUsed": ["Unity", "C#"],
+    "detailsLink": "",
+    "staticImage": "/assets/img/thumbnails/gamejam2.png",
+    "gifImage": "/assets/img/thumbnails/gifs/gamejam2.gif"
+  },
+  {
+    "name": "Waterbottle App",
+    "date": "08/04/2021",
+    "duration": "Free Project",
+    "people": "Solo",
+    "techUsed": ["Unity", "C#"],
+    "detailsLink": "",
+    "staticImage": "/assets/img/thumbnails/waterbottle.png",
+    "gifImage": "/assets/img/thumbnails/gifs/waterbottle.gif"
+  },
+  {
+    "name": "Tech Clicker",
+    "date": "21/12/2020",
+    "duration": "Free Project",
+    "people": "Solo",
+    "techUsed": ["Unity", "C#"],
+    "detailsLink": "",
+    "staticImage": "/assets/img/thumbnails/techclicker.png",
+    "gifImage": "/assets/img/thumbnails/gifs/techclicker.gif"
+  },
+  {
+    "name": "Brackey's Jam 2020.2",
+    "date": "08/08/2020",
+    "duration": "7 Days",
+    "people": "Group of 2",
+    "techUsed": ["Unity", "Blender"],
+    "detailsLink": "",
+    "staticImage": "/assets/img/thumbnails/gamejam1.png",
+    "gifImage": "/assets/img/thumbnails/gifs/gamejam1.gif"
+  },
+  {
+    "name": "Minesweeper Website",
+    "date": "15/07/2020",
+    "duration": "Free Project",
+    "people": "Solo",
+    "techUsed": ["Javascript", "HTML", "Nodejs", "Git"],
+    "detailsLink": "",
+    "staticImage": "/assets/img/thumbnails/minesweeperjs.png",
+    "gifImage": "/assets/img/thumbnails/gifs/minesweeper.gif"
+  },
+  {
+    "name": "Piano Arduino",
+    "date": "",
+    "duration": "Free Project",
+    "people": "Solo",
+    "techUsed": ["Arduino"],
+    "detailsLink": "",
+    "staticImage": "/assets/img/thumbnails/pianoarduino.png",
+    "gifImage": "/assets/img/thumbnails/gifs/pianoarduino.gif"
   }
-  
 ]

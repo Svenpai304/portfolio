@@ -28,8 +28,7 @@
 /******************/
 
 .projItem {
-  width: 100%;
-  
+  width: 60%;
   padding: 15px;
   display: flex;
   align-items: center;
@@ -48,8 +47,9 @@
 
   & .gif-image {
     transform: translateY(100%);
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, opacity 0.3s ease;
     position: absolute;
+    opacity: 0;
     left: 0;
     z-index: 2;
   }
@@ -60,7 +60,8 @@
     
     .gif-image {
       transform: translateY(0);
-      transition: transform 0.3s ease;
+      opacity: 1;
+      transition: transform 0.3s ease, opacity 0.3s ease;
     }
   }
 }
@@ -139,7 +140,9 @@
 /******************/
 
 .spotifyAlbum {
-
+  display: flex;
+  align-items: center;
+  
 }
 
 .musicFile {
@@ -162,7 +165,7 @@
   & iframe {
     aspect-ratio: 18 / 13;
     position: relative;
-    width: 50%;
+    width: 20%;
     height: auto;
     margin: 5px;
   }
