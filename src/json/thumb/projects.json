@@ -1,13 +1,193 @@
 ﻿[
   {
-    "name": "C++ Basics",
-    "date": "06/05/2023",
+    "name": "Seminar Maker: Bubble Machine",
+    "date": "18/06/2024",
+    "duration": "2 Weeks",
+    "people": "Solo",
+    "techUsed": ["Arduino"],
+    "detailsLink": "",
+    "staticImage": "bellenblaas.png",
+    "gifImage": "bellenblaas.gif"
+  },
+  {
+    "name": "Graphics Programming",
+    "date": "17/04/2024",
+    "duration": "8 Weeks",
+    "people": "Solo",
+    "techUsed": ["C++", "Opengl", "glm", "GLFW", "stbi", "assimp"],
+    "detailsLink": "",
+    "staticImage": "graphics.png",
+    "gifImage": "graphics.gif"
+  },
+  {
+    "name": "Game Music Composition",
+    "date": "15/04/2024",
+    "duration": "8 Weeks",
+    "people": "Solo",
+    "techUsed": ["flstudio", "FL Studio"],
+    "detailsLink": "",
+    "staticImage": "sfx.png",
+    "gifImage": "sfx.gif"
+  },
+  {
+    "name": "DrRon's Showdowns",
+    "date": "15/04/2024",
+    "duration": "8 Weeks",
+    "people": "Group of 3",
+    "techUsed": ["Unity", "C#", "Animate", "Photoshop", "Illustrator"],
+    "detailsLink": "",
+    "staticImage": "vrij2.png",
+    "gifImage": "vrij2.gif"
+  },
+  {
+    "name": "Procedural Art",
+    "date": "12/02/2024",
     "duration": "6 Weeks",
+    "people": "Solo",
+    "techUsed": ["Unity", "C#"],
+    "detailsLink": "",
+    "staticImage": "proceduralart.png",
+    "gifImage": "proceduralart.gif"
+  },
+  {
+    "name": "Production Tools",
+    "date": "12/02/2024",
+    "duration": "6 Weeks",
+    "people": "Solo",
+    "techUsed": ["Unity", "C#", "Json"],
+    "detailsLink": "",
+    "staticImage": "tool.png",
+    "gifImage": "tool.gif"
+  },
+  {
+    "name": "Portfolio",
+    "date": "09/04/2024",
+    "duration": "N/A",
+    "people": "Solo",
+    "techUsed": ["Html", "css", "scss", "Javascript", "nodejs"],
+    "detailsLink": "",
+    "staticImage": "portfolio.png",
+    "gifImage": "portfolio.gif"
+  },
+  {
+    "name": "Context 2: Making a sustainable game",
+    "date": "05/02/2024",
+    "duration": "8 Weeks",
+    "people": "Team of 7, University Collaberation <iconify-icon icon=\"hugeicons:university\" width=\"24px\" height=\"24px\" class='textIcons'></iconify-icon>",
+    "techUsed": ["Unity", "C#"],
+    "detailsLink": "",
+    "staticImage": "context2.png",
+    "gifImage": "context2.gif"
+  },
+  {
+    "name": "Seminar Catlab",
+    "date": "22/01/2024",
+    "duration": "2 Weeks",
+    "people": "Team of 8, Interdisciplinary collaboration",
+    "techUsed": ["Unity", "C#", "Live instruments"],
+    "detailsLink": "",
+    "staticImage": "catlab.png",
+    "gifImage": "catlab.gif"
+  },
+  {
+    "name": "Project Hybrid",
+    "date": "11/12/2023",
+    "duration": "4 Weeks",
+    "people": "Team of 6",
+    "techUsed": ["Unity", "C#", "arduino"],
+    "detailsLink": "",
+    "staticImage": "hybrid.png",
+    "gifImage": "/hybrid.gif"
+  },
+  {
+    "name": "Designing for AI Games ",
+    "date": "13/11/2023",
+    "duration": "4 Weeks",
+    "people": "Solo",
+    "techUsed": ["Unity", "C#"],
+    "detailsLink": "",
+    "staticImage": "keuzeai.png",
+    "gifImage": "keuzeai.gif"
+  },
+  {
+    "name": "Developing for AI Games: Behaviour Tree",
+    "date": "13/11/2023",
+    "duration": "4 Weeks",
+    "people": "Solo",
+    "techUsed": ["Unity", "C#"],
+    "detailsLink": "",
+    "staticImage": "kernai.png",
+    "gifImage": "kernai.gif"
+  },
+  {
+    "name": "Developing for AI Games: A*",
+    "date": "13/11/2023",
+    "duration": "4 Weeks",
+    "people": "Solo",
+    "techUsed": ["Unity", "C#"],
+    "detailsLink": "",
+    "staticImage": "astar.png",
+    "gifImage": "astar.gif"
+  },
+  {
+    "name": "Developing for AI Games: Boids",
+    "date": "13/11/2023",
+    "duration": "4 Weeks",
+    "people": "Solo",
+    "techUsed": ["Unity", "C#"],
+    "detailsLink": "",
+    "staticImage": "boids.png",
+    "gifImage": "boids.gif"
+  },
+  {
+    "name": "Show Me",
+    "date": "09/10/2023",
+    "duration": "5 Weeks",
+    "people": "Team of 6",
+    "techUsed": ["Unity", "C#"],
+    "detailsLink": "",
+    "staticImage": "showme.png",
+    "gifImage": "showme.gif"
+  },
+  {
+    "name": "App Development",
+    "date": "11/09/2023",
+    "duration": "4 Weeks",
+    "people": "Solo",
+    "techUsed": ["Yaml", "C#", "Json", "MySQL"],
+    "detailsLink": "",
+    "staticImage": "appdev.png",
+    "gifImage": "appdev.gif"
+  },
+  {
+    "name": "Game Architecture",
+    "date": "04/09/2023",
+    "duration": "5 Weeks",
+    "people": "Group of 2",
+    "techUsed": ["Unity", "C#"],
+    "detailsLink": "",
+    "staticImage": "architecture.png",
+    "gifImage": "architecture.gif"
+  },
+  {
+    "name": "C++ Basics",
+    "date": "15/04/2023",
+    "duration": "8 Weeks",
     "people": "Solo",
     "techUsed": ["C++", "SFML"],
     "detailsLink": "",
-    "staticImage": "/assets/img/thumbnails/cppbasics.png",
-    "gifImage": "/assets/img/thumbnails/gifs/cppbasics.gif"
+    "staticImage": "cppbasics.png",
+    "gifImage": "cppbasics.gif"
+  },
+  {
+    "name": "Somnia",
+    "date": "01/04/2023",
+    "duration": "10 Weeks",
+    "people": "Team of 6",
+    "techUsed": ["Unity", "C#"],
+    "detailsLink": "",
+    "staticImage": "https://img.itch.zone/aW1nLzEyNjc2MzY5LnBuZw==/315x250%23c/ZCml32.png",
+    "gifImage": "vrij1.gif"
   },
   {
     "name": "If This Then That",
@@ -16,28 +196,38 @@
     "people": "Solo",
     "techUsed": ["Arduino"],
     "detailsLink": "",
-    "staticImage": "/assets/img/thumbnails/ittt.png",
-    "gifImage": "/assets/img/thumbnails/gifs/ittt.gif"
+    "staticImage": "ittt.png",
+    "gifImage": "ittt.gif"
+  },
+  {
+    "name": "Building Playful Worlds 2",
+    "date": "05/02/2023",
+    "duration": "8 Weeks",
+    "people": "Solo",
+    "techUsed": ["Unity", "C#"],
+    "detailsLink": "",
+    "staticImage": "bpw2.png",
+    "gifImage": "bpw2.gif"
   },
   {
     "name": "Deadline Droids",
     "date": "05/02/2023",
     "duration": "8 Weeks",
     "people": "Team of 4",
-    "techUsed": ["Unity", "C#", "Git", "Network"],
+    "techUsed": ["Unity", "C#", "Network"],
     "detailsLink": "",
-    "staticImage": "/assets/img/thumbnails/context1.png",
-    "gifImage": "/assets/img/thumbnails/gifs/context1.gif"
+    "staticImage": "context1.png",
+    "gifImage": "context1.gif"
   },
   {
     "name": "Global Game Jam 2023",
     "date": "03/02/2023",
     "duration": "3 Days",
     "people": "Group of 3",
-    "techUsed": ["Unity", "C#", "Git"],
+    "techUsed": ["Unity", "C#"],
     "detailsLink": "",
-    "staticImage": "/assets/img/thumbnails/roots.png",
-    "gifImage": "/assets/img/thumbnails/gifs/roots.gif"
+    "staticImage": "roots.png",
+    "gifImage": "roots.gif"
   },
   {
     "name": "Using Arduino For Evil",
@@ -46,18 +236,18 @@
     "people": "Solo",
     "techUsed": ["Arduino"],
     "detailsLink": "",
-    "staticImage": "/assets/img/thumbnails/arduinoevil.png",
-    "gifImage": "/assets/img/thumbnails/gifs/arduinoevil.gif"
+    "staticImage": "arduinoevil.png",
+    "gifImage": "arduinoevil.gif"
   },
   {
     "name": "Building Playful Worlds 1",
     "date": "23/12/2022",
     "duration": "6 Weeks",
     "people": "Solo",
-    "techUsed": ["Unity", "C#", "Git"],
+    "techUsed": ["Unity", "C#"],
     "detailsLink": "",
-    "staticImage": "/assets/img/thumbnails/bpw1.png",
-    "gifImage": "/assets/img/thumbnails/gifs/bpw1.gif"
+    "staticImage": "bpw1.png",
+    "gifImage": "bpw1.gif"
   },
   {
     "name": "Empowering Creative Thinking Through Programming",
@@ -66,8 +256,8 @@
     "people": "Solo",
     "techUsed": ["Processing", "Java"],
     "detailsLink": "",
-    "staticImage": "/assets/img/thumbnails/ecttp.png",
-    "gifImage": "/assets/img/thumbnails/gifs/ecttp.gif"
+    "staticImage": "ecttp.png",
+    "gifImage": "ecttp.gif"
   },
   {
     "name": "Project Play",
@@ -76,8 +266,8 @@
     "people": "Solo",
     "techUsed": ["Unity", "C#"],
     "detailsLink": "",
-    "staticImage": "/assets/img/thumbnails/projectplay.png",
-    "gifImage": "/assets/img/thumbnails/gifs/projectplay.gif"
+    "staticImage": "projectplay.png",
+    "gifImage": "projectplay.gif"
   },
   {
     "name": "Wowie Jam 4.0",
@@ -86,8 +276,8 @@
     "people": "Solo",
     "techUsed": ["Unity", "C#"],
     "detailsLink": "",
-    "staticImage": "/assets/img/thumbnails/gamejam4.png",
-    "gifImage": "/assets/img/thumbnails/gifs/gamejam4.gif"
+    "staticImage": "gamejam4.png",
+    "gifImage": "gamejam4.gif"
   },
   {
     "name": "Brackeys Game Jam 2021.2",
@@ -96,8 +286,8 @@
     "people": "Solo",
     "techUsed": ["Unity", "C#"],
     "detailsLink": "",
-    "staticImage": "/assets/img/thumbnails/gamejam3.png",
-    "gifImage": "/assets/img/thumbnails/gifs/gamejam3.gif"
+    "staticImage": "gamejam3.png",
+    "gifImage": "gamejam3.gif"
   },
   {
     "name": "Brackeys Game Jam 2021.1",
@@ -106,28 +296,28 @@
     "people": "Solo",
     "techUsed": ["Unity", "C#"],
     "detailsLink": "",
-    "staticImage": "/assets/img/thumbnails/gamejam2.png",
-    "gifImage": "/assets/img/thumbnails/gifs/gamejam2.gif"
+    "staticImage": "gamejam2.png",
+    "gifImage": "gamejam2.gif"
   },
   {
     "name": "Waterbottle App",
     "date": "08/04/2021",
-    "duration": "Free Project",
+    "duration": "N/A",
     "people": "Solo",
     "techUsed": ["Unity", "C#"],
     "detailsLink": "",
-    "staticImage": "/assets/img/thumbnails/waterbottle.png",
-    "gifImage": "/assets/img/thumbnails/gifs/waterbottle.gif"
+    "staticImage": "waterbottle.png",
+    "gifImage": "waterbottle.gif"
   },
   {
     "name": "Tech Clicker",
     "date": "21/12/2020",
-    "duration": "Free Project",
+    "duration": "N/A",
     "people": "Solo",
     "techUsed": ["Unity", "C#"],
     "detailsLink": "",
-    "staticImage": "/assets/img/thumbnails/techclicker.png",
-    "gifImage": "/assets/img/thumbnails/gifs/techclicker.gif"
+    "staticImage": "techclicker.png",
+    "gifImage": "techclicker.gif"
   },
   {
     "name": "Brackey's Jam 2020.2",
@@ -136,27 +326,27 @@
     "people": "Group of 2",
     "techUsed": ["Unity", "Blender"],
     "detailsLink": "",
-    "staticImage": "/assets/img/thumbnails/gamejam1.png",
-    "gifImage": "/assets/img/thumbnails/gifs/gamejam1.gif"
+    "staticImage": "gamejam1.png",
+    "gifImage": "gamejam1.gif"
   },
   {
     "name": "Minesweeper Website",
     "date": "15/07/2020",
-    "duration": "Free Project",
+    "duration": "N/A",
     "people": "Solo",
-    "techUsed": ["Javascript", "HTML", "Nodejs", "Git"],
+    "techUsed": ["Javascript", "HTML", "Nodejs"],
     "detailsLink": "",
-    "staticImage": "/assets/img/thumbnails/minesweeperjs.png",
-    "gifImage": "/assets/img/thumbnails/gifs/minesweeper.gif"
+    "staticImage": "minesweeperjs.png",
+    "gifImage": "minesweeper.gif"
   },
   {
     "name": "Piano Arduino",
     "date": "",
-    "duration": "Free Project",
+    "duration": "N/A",
     "people": "Solo",
     "techUsed": ["Arduino"],
     "detailsLink": "",
-    "staticImage": "/assets/img/thumbnails/pianoarduino.png",
-    "gifImage": "/assets/img/thumbnails/gifs/pianoarduino.gif"
+    "staticImage": "pianoarduino.png",
+    "gifImage": "pianoarduino.gif"
   }
 ]

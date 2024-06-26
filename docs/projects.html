@@ -59,19 +59,31 @@
     document.addEventListener('DOMContentLoaded', async function() {
         function createProjectHTML(project) {
             const techIconsMap = {
-                'unity': '<iconify-icon icon="skill-icons:unity-light" width="24px" height="24px" class="textIcons"></iconify-icon>',
-                'c#': '<iconify-icon icon="devicon:csharp" width="24px" height="24px" class="textIcons"></iconify-icon>',
-                'processing': '<iconify-icon icon="skill-icons:processing-light" width="24px" height="24px" class="textIcons"></iconify-icon>',
-                'java': '<iconify-icon icon="skill-icons:java-light" width="24px" height="24px" class="textIcons"></iconify-icon>',
-                'blender': '<iconify-icon icon="logos:blender" width="24px" height="24px" class="textIcons"></iconify-icon>',
-                'arduino': '<iconify-icon icon="skill-icons:arduino" width="24px" height="24px" class="textIcons"></iconify-icon>',
-                'javascript': '<iconify-icon icon="skill-icons:javascript" width="24px" height="24px" class="textIcons"></iconify-icon>',
-                'html': '<iconify-icon icon="vscode-icons:file-type-html" width="24px" height="24px" class="textIcons"></iconify-icon>',
-                'nodejs': '<iconify-icon icon="logos:nodejs-icon" width="24px" height="24px" class="textIcons"></iconify-icon>',
-                'git': '<iconify-icon icon="devicon:git" width="24px" height="24px" class="textIcons"></iconify-icon>',
-                'network': '<iconify-icon icon="zondicons:network" width="24px" height="24px" class="textIcons"></iconify-icon>',
-                'c++': '<iconify-icon icon="vscode-icons:file-type-cpp3" width="24px" height="24px" class="textIcons"></iconify-icon>',
-                'sfml': '<iconify-icon icon="simple-icons:sfml" width="24px" height="24px" style="color: #90C74A" class="textIcons"></iconify-icon>'
+                'unity': iconString("skill-icons:unity-light"),
+                'c#': iconString("devicon:csharp"),
+                'processing': iconString("skill-icons:processing-light"),
+                'java': iconString("skill-icons:java-light"),
+                'blender': iconString("logos:blender"),
+                'arduino': iconString("skill-icons:arduino"),
+                'javascript': iconString("ri:javascript-fill", "#f0db4f"),
+                'html': iconString("vscode-icons:file-type-html"),
+                'nodejs': iconString("logos:nodejs-icon"),
+                'git': iconString("devicon:git"),
+                'network': iconString("zondicons:network"),
+                'c++': iconString("vscode-icons:file-type-cpp3"),
+                'sfml': iconString("simple-icons:sfml", "#90C74A"),
+                'yaml': iconString("devicon:yaml"),
+                'json': iconString("bi:filetype-json"),
+                'mysql': iconString("skill-icons:mysql-dark"),
+                'css': iconString("vscode-icons:file-type-css"),
+                'scss': iconString("vscode-icons:file-type-scss2"),
+                'photoshop': iconString("devicon:photoshop"),
+                'animate': iconString("logos:adobe-animate"),
+                'illustrator': iconString("logos:adobe-illustrator"),
+                'flstudio': iconString("fad:logo-fl", "#fe962e"),
+                'opengl' : iconString("devicon:opengl"),
+                'glm' : '<img src="/assets/img/glm-logo.svg" width="24px" height="12px" style="transform: translateY(-2px);" alt="Example SVG">'
+                
             };
             function convertTechToIcon(tech) {
                 const lowerTech = tech.trim().toLowerCase();
@@ -80,24 +92,39 @@
                 }
                 return tech;
             }
+            function formatDate(dateString) {
+                const [day, month, year] = dateString.split('/');
+                const date = new Date(`${year}-${month}-${day}`);
+                return date.toLocaleDateString('en-GB', {
+                    day: 'numeric',
+                    month: 'long',
+                    year: 'numeric'
+                });
+            }
+
             const techUsedHtml = project.techUsed.map(tech => convertTechToIcon(tech));
+            const formattedDate = formatDate(project.date);
             
             return `
                 <div class="projItem">
                     <div class="projDetails">
                         <h2>${project.name}</h2>
-                        <p><strong><iconify-icon icon="uiw:date" width="24px" height="24px" class="textIcons"></iconify-icon> Date:</strong> ${project.date}</p>
+                        <p><strong><iconify-icon icon="uiw:date" width="24px" height="24px" class="textIcons"></iconify-icon> Date:</strong> ${formattedDate}</p>
                         <p><strong><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path fill="currentColor" d="M12,1A11,11,0,1,0,23,12,11,11,0,0,0,12,1Zm0,20a9,9,0,1,1,9-9A9,9,0,0,1,12,21Z"/><rect width="2" height="7" x="11" y="6" fill="currentColor" rx="1"><animateTransform attributeName="transform" dur="45s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/></rect><rect width="2" height="9" x="11" y="11" fill="currentColor" rx="1"><animateTransform attributeName="transform" dur="3.75s" repeatCount="indefinite" type="rotate" values="0 12 12;360 12 12"/></rect></svg> Time: </strong> ${project.duration}</p>
                         <p><strong><iconify-icon icon="ic:baseline-people" width="24px" height="24px" class="textIcons"></iconify-icon> Contributors:</strong> ${project.people}</p>
                         <p><strong><iconify-icon icon="carbon:cics-program" width="24px" height="24px" class="textIcons"></iconify-icon> Tech used:</strong> ${techUsedHtml.join(' ')}</p>
                         <a href="${project.detailsLink}" class="glightbox details-link">More Details</a>
                     </div>
                     <a href="${project.detailsLink}" class="image-wrapper">
-                        <img src="${project.staticImage}" class="static-image" />
-                        <img src="${project.gifImage}" class="gif-image"/>
+                        <img src="/assets/img/thumbnails/${project.staticImage}" class="static-image" />
+                        <img src="/assets/img/thumbnails/gifs/${project.gifImage}" class="gif-image"/>
                     </a>
                 </div>
             `;
+        }
+        function iconString(icon, color = '', width = '24px', height = '24px') {
+            const style = color ? ` style="color: ${color}"` : '';
+            return `<iconify-icon icon="${icon}" width="${width}" height="${height}" class="textIcons"${style}></iconify-icon>`;
         }
         async function loadJSONResource(url) {
             const response = await fetch(url);
