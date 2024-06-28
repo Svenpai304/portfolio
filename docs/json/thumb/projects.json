@@ -14,7 +14,7 @@
     "date": "17/04/2024",
     "duration": "8 Weeks",
     "people": "Solo",
-    "techUsed": ["C++", "Opengl", "glm", "GLFW", "stbi", "assimp"],
+    "techUsed": ["C++", "Cmake", "Opengl", "glm", "GLFW", "stbi", "assimp"],
     "detailsLink": "",
     "staticImage": "graphics.png",
     "gifImage": "graphics.gif"
@@ -44,7 +44,7 @@
     "date": "12/02/2024",
     "duration": "6 Weeks",
     "people": "Solo",
-    "techUsed": ["Unity", "C#"],
+    "techUsed": ["Unity", "C#", "aseprite"],
     "detailsLink": "",
     "staticImage": "proceduralart.png",
     "gifImage": "proceduralart.gif"
@@ -114,7 +114,7 @@
     "date": "13/11/2023",
     "duration": "4 Weeks",
     "people": "Solo",
-    "techUsed": ["Unity", "C#"],
+    "techUsed": ["Unity", "C#", "aseprite"],
     "detailsLink": "",
     "staticImage": "kernai.png",
     "gifImage": "kernai.gif"
@@ -164,7 +164,7 @@
     "date": "04/09/2023",
     "duration": "5 Weeks",
     "people": "Group of 2",
-    "techUsed": ["Unity", "C#"],
+    "techUsed": ["Unity", "C#", "aseprite"],
     "detailsLink": "",
     "staticImage": "architecture.png",
     "gifImage": "architecture.gif"
@@ -204,7 +204,7 @@
     "date": "05/02/2023",
     "duration": "8 Weeks",
     "people": "Solo",
-    "techUsed": ["Unity", "C#"],
+    "techUsed": ["Unity", "C#", "aseprite"],
     "detailsLink": "",
     "staticImage": "bpw2.png",
     "gifImage": "bpw2.gif"
@@ -236,8 +236,8 @@
     "people": "Solo",
     "techUsed": ["Arduino"],
     "detailsLink": "",
-    "staticImage": "arduinoevil.png",
-    "gifImage": "arduinoevil.gif"
+    "staticImage": "evilarduino.png",
+    "gifImage": "evilarduino.gif"
   },
   {
     "name": "Building Playful Worlds 1",
