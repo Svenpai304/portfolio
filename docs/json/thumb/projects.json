@@ -116,8 +116,8 @@
     "people": "Solo",
     "techUsed": ["Unity", "C#", "aseprite"],
     "detailsLink": "",
-    "staticImage": "kernai.png",
-    "gifImage": "kernai.gif"
+    "staticImage": "behaviourtree.png",
+    "gifImage": "behaviourtree.gif"
   },
   {
     "name": "Developing for AI Games: A*",
@@ -186,7 +186,7 @@
     "people": "Team of 6",
     "techUsed": ["Unity", "C#"],
     "detailsLink": "",
-    "staticImage": "https://img.itch.zone/aW1nLzEyNjc2MzY5LnBuZw==/315x250%23c/ZCml32.png",
+    "staticImage": "vrij1.png",
     "gifImage": "vrij1.gif"
   },
   {
