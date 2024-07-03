@@ -1,17 +1,21 @@
 .grid-container {
-  display: grid;
-  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  flex-wrap: nowrap;
   justify-items: center;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
   font-family: Questrial, sans-serif;
-  gap: 10px;
   padding: 20px;
   color: white;
 }
+
+.grid-row{
+  margin: 10px;
+}
+
+
 .grid-item {
-  background-color: #141414;
-  padding: 20px;
-  border: 1px solid #ddd;
+  padding: 5px;
   border-radius: 8px;
   justify-content: center; /* Center vertically */
   align-items: center; /* Center horizontally */
@@ -19,6 +23,34 @@
 }
 .grid-item h2 {
   margin-top: 0;
+}
+
+.grid-item ul {
+  display: flex;
+  flex-wrap: wrap; /* Allow wrapping if there are many items */
+  padding: 0; /* Remove default padding */
+  list-style: none; /* Remove default list style */
+}
+
+.secondary-row .grid-item ul {
+  display: grid; /* Use CSS Grid for secondary skills */
+  grid-template-columns: 2fr; /* Define columns */
+  gap: 10px; /* Adjust the space between items */
+}
+
+.grid-item li {
+  margin-right: 3px; /* Adjust the space between items */
+  display: flex;
+  align-items: center;
+  
+}
+
+.grid-item img{
+  transform: translateY(5px);
+}
+
+.grid-item iconify-icon {
+  
 }
 
 .title{

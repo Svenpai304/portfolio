@@ -62,7 +62,7 @@
                 'git': iconString("devicon:git"),
                 'network': iconString("zondicons:network"),
                 'c++': iconString("vscode-icons:file-type-cpp3"),
-                'sfml': iconString("simple-icons:sfml", "#90C74A"),
+                'sfml': iconString("/assets/img/icons/sfml.png"),
                 'yaml': iconString("devicon:yaml"),
                 'json': iconString("bi:filetype-json"),
                 'mysql': iconString("skill-icons:mysql-dark"),
@@ -71,11 +71,11 @@
                 'photoshop': iconString("devicon:photoshop"),
                 'animate': iconString("logos:adobe-animate"),
                 'illustrator': iconString("logos:adobe-illustrator"),
-                'flstudio': iconString("fad:logo-fl", "#fe962e"),
+                'flstudio': iconString("/assets/img/icons/flstudio.png"),
                 'opengl' : iconString("devicon:opengl"),
                 'glm' : '<img src="/assets/img/icons/glm-logo.svg" width="24px" height="12px" style="transform: translateY(-2px);" alt="Example SVG">',
                 'cmake' : iconString("devicon:cmake"),
-                'aseprite': iconString("simple-icons:aseprite")
+                'aseprite': iconString("/assets/img/icons/aseprite.png")
             };
             function convertTechToIcon(tech) {
                 const lowerTech = tech.trim().toLowerCase();
@@ -114,10 +114,17 @@
                 </div>
             `;
         }
+        
         function iconString(icon, color = '', width = '24px', height = '24px') {
             const style = color ? ` style="color: ${color}"` : '';
-            return `<iconify-icon icon="${icon}" width="${width}" height="${height}" class="textIcons"${style}></iconify-icon>`;
+            if (icon.endsWith('.png')) {
+                return `<img src="${icon}" width="${width}" height="${height}">`;
+            } else {
+                return`<iconify-icon icon="${icon}" width="${width}" height="${height}" class="textIcons"${style}></iconify-icon>`;
+            }
         }
+        
+        
         async function loadJSONResource(url) {
             const response = await fetch(url);
             if (!response.ok) throw new Error(`HTTP error! Status: ${response.status}`);
