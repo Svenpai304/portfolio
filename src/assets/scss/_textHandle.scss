@@ -13,7 +13,6 @@
   margin: 10px;
 }
 
-
 .grid-item {
   padding: 5px;
   border-radius: 8px;
@@ -36,6 +35,7 @@
   display: grid; /* Use CSS Grid for secondary skills */
   grid-template-columns: 2fr; /* Define columns */
   gap: 10px; /* Adjust the space between items */
+  max-height: 100px;
 }
 
 .grid-item li {
