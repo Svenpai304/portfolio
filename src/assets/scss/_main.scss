@@ -1,20 +1,5 @@
 .defaultTheme {
-  background-color: #2d2d2d;
-}
-
-.codeTheme {
-  background-color: #0298ef;
-  overflow: hidden;
-}
-
-.musicTheme {
-  background-color: #ef8802;
-  overflow: hidden;
-}
-
-.artTheme {
-  background-color: #7102ef;
-  overflow: hidden;
+  background: #1f1f1f;
 }
 
 .textIcons {
@@ -23,18 +8,23 @@
 
 .container {
   max-width: 70%;
-  margin: 0 auto;
-  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+/*  margin: 0 auto;
+  margin-top: 15px;*/
+  
 }
 
 .projContainer{
   @extend .container;
-
+  
   & h1 {
     font-family: 'Outfit', sans-serif;
     font-size: 50px;
     margin: 10px;
     color: white;
+    align-items: center;
+    align-content: center;
     text-align: center;
   }
 }

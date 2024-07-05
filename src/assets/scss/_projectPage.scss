@@ -32,12 +32,11 @@
   display: flex;
   align-items: center;
   border-radius: 10px;
-  
   overflow: hidden;
-  margin-bottom: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   background-color: rgba(30, 30, 30, 0.8); /* Adjust transparency here */
   transition: box-shadow 0.3s ease, transform 0.3s ease;
+  margin: 0 auto 20px auto;
 
   & .static-image {
     position: absolute;
@@ -138,6 +137,9 @@
 /******************/
 /* MUSIC STUFF     */
 /******************/
+.musicContainer {
+}
+
 
 .spotifyAlbum {
   display: flex;

@@ -1,25 +1,30 @@
 .grid-container {
   display: flex;
-  flex-direction: row;
-  width: 100%;
-  flex-wrap: nowrap;
-  justify-items: center;
+  height: 100vh; /* Full viewport height */
   font-family: Questrial, sans-serif;
   padding: 20px;
   color: white;
 }
 
-.grid-row{
-  margin: 10px;
+#language{
+  max-width: 200px;
+}
+
+.grid-row {
+  width: 100%; /* Make rows take full width of the container */
 }
 
 .grid-item {
+  max-width: 300px;
   padding: 5px;
-  border-radius: 8px;
-  justify-content: center; /* Center vertically */
-  align-items: center; /* Center horizontally */
-  text-align: left; /* Center text */
 }
+
+.info-content img {
+  width: 10em;
+  display: flex;
+  justify-content: center;
+}
+
 .grid-item h2 {
   margin-top: 0;
 }
@@ -27,33 +32,21 @@
 .grid-item ul {
   display: flex;
   flex-wrap: wrap; /* Allow wrapping if there are many items */
-  padding: 0; /* Remove default padding */
+  padding: 3px; /* Remove default padding */
   list-style: none; /* Remove default list style */
-}
-
-.secondary-row .grid-item ul {
-  display: grid; /* Use CSS Grid for secondary skills */
-  grid-template-columns: 2fr; /* Define columns */
-  gap: 10px; /* Adjust the space between items */
-  max-height: 100px;
 }
 
 .grid-item li {
   margin-right: 3px; /* Adjust the space between items */
   display: flex;
   align-items: center;
-  
 }
 
-.grid-item img{
+.grid-item img {
   transform: translateY(5px);
 }
 
-.grid-item iconify-icon {
-  
-}
-
-.title{
+.title {
   font-family: Questrial, sans-serif;
   font-size: 40px;
   color: white;
@@ -71,7 +64,7 @@
   text-align: left;
 }
 
-.text{
+.text {
   font-family: Questrial, sans-serif;
   color: white;
   font-size: 24px;
@@ -80,7 +73,7 @@
 
 .textBar {
   text-align: center;
-  margin:10px;
+  margin: 10px;
 }
 
 .textBarL {
@@ -97,4 +90,10 @@
 .listText ul {
   list-style-type: disc;
   padding-left: 20px;
+}
+
+@media (max-width: 600px) {
+  .grid-item h2 {
+    width: 80%;
+  }
 }
