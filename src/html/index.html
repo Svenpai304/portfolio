@@ -146,13 +146,13 @@
         function createSkillItem(skill) {
             if (skill.icon.endsWith('.png')) {
                 return `
-                <li>
+                <li class="skill" title="${skill.name}">
                     <img src="${skill.icon}" width="40px" height="40px">
                 </li>
                 `;
             } else {
                 return `
-                <li>
+                <li class="skill" title="${skill.name}">
                     <iconify-icon icon="${skill.icon}" width="40px" height="40px" class="textIcons"></iconify-icon>
                 </li>
                 `;
