@@ -4,7 +4,7 @@
     "date": "18/06/2024",
     "duration": "2 Weeks",
     "people": "Solo",
-    "techUsed": ["Arduino"],
+    "techUsed": [],
     "detailsLink": "",
     "staticImage": "bellenblaas.png",
     "gifImage": "bellenblaas.gif"
@@ -20,34 +20,14 @@
     "gifImage": "graphics.gif"
   },
   {
-    "name": "Game Music Composition",
-    "date": "15/04/2024",
-    "duration": "8 Weeks",
-    "people": "Solo",
-    "techUsed": ["flstudio", "FL Studio"],
-    "detailsLink": "",
-    "staticImage": "sfx.png",
-    "gifImage": "sfx.gif"
-  },
-  {
     "name": "DrRon's Showdowns",
     "date": "15/04/2024",
     "duration": "8 Weeks",
     "people": "Group of 3",
-    "techUsed": ["Unity", "C#", "Animate", "Photoshop", "Illustrator"],
+    "techUsed": ["Unity", "C#"],
     "detailsLink": "",
     "staticImage": "vrij2.png",
     "gifImage": "vrij2.gif"
-  },
-  {
-    "name": "Procedural Art",
-    "date": "12/02/2024",
-    "duration": "6 Weeks",
-    "people": "Solo",
-    "techUsed": ["Unity", "C#", "aseprite"],
-    "detailsLink": "",
-    "staticImage": "proceduralart.png",
-    "gifImage": "proceduralart.gif"
   },
   {
     "name": "Production Tools",
@@ -80,17 +60,7 @@
     "gifImage": "context2.gif"
   },
   {
-    "name": "Seminar Catlab",
-    "date": "22/01/2024",
-    "duration": "2 Weeks",
-    "people": "Team of 8, Interdisciplinary collaboration",
-    "techUsed": ["Unity", "C#", "Live instruments"],
-    "detailsLink": "",
-    "staticImage": "catlab.png",
-    "gifImage": "catlab.gif"
-  },
-  {
-    "name": "Project Hybrid",
+    "name": "Call Center Chaos",
     "date": "11/12/2023",
     "duration": "4 Weeks",
     "people": "Team of 6",
@@ -100,7 +70,7 @@
     "gifImage": "/hybrid.gif"
   },
   {
-    "name": "Designing for AI Games ",
+    "name": "Designing for AI Games",
     "date": "13/11/2023",
     "duration": "4 Weeks",
     "people": "Solo",
@@ -150,7 +120,7 @@
     "gifImage": "showme.gif"
   },
   {
-    "name": "App Development",
+    "name": "VFX",
     "date": "11/09/2023",
     "duration": "4 Weeks",
     "people": "Solo",
