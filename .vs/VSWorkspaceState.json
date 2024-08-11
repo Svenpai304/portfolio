@@ -4,11 +4,14 @@
     "\\docs",
     "\\docs\\assets",
     "\\docs\\assets\\img",
+    "\\docs\\assets\\img\\thumbnails",
     "\\src",
     "\\src\\assets",
-    "\\src\\html",
-    "\\src\\json"
+    "\\src\\assets\\img\\icons",
+    "\\src\\assets\\img\\thumbnails",
+    "\\src\\json",
+    "\\src\\json\\thumb"
   ],
-  "SelectedNode": "\\docs\\assets\\js",
+  "SelectedNode": "\\docs\\assets\\img\\thumbnails",
   "PreviewInSolutionExplorer": false
 }

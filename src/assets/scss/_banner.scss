@@ -19,29 +19,28 @@
 }
 
 .banner {
-  //padding: 20px 0;
-  position: relative;
-  overflow: hidden;
-  
-  /* Text */
-  color: white;
-  font-family: 'Outfit', sans-serif;
-  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
-  text-align: center;
-
-  & h1 {
-    font-family: 'Outfit', sans-serif;
-    font-size: 100px;
-    margin-top: 10px;
-    margin-bottom: 10px;
+    //padding: 20px 0;
+    position: relative;
+    overflow: hidden;
+    /* Text */
     color: white;
-    display: inline-table;
-  }
-  
-  & img {
-    margin-bottom: 10px;
-    animation: bump 1s;
-  }
+    font-family: 'Courier New', monospace;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    text-align: center;
+
+    & h1 {
+        font-family: 'Courier New', monospace;
+        font-size: 100px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        color: white;
+        display: inline-table;
+    }
+
+    & img {
+        margin-bottom: 10px;
+        animation: bump 1s;
+    }
 }
 
 .wave-text {
@@ -83,10 +82,9 @@
   right: 0;
   bottom: 0;
   left: 0;
-  background-image: url('/assets/img/background.png');
+  background-image: url('/assets/img/halftone2.jpg');
   background-position: center 70%;
   background-size: cover;
-  filter: blur(2px);
   z-index: -1;
 }
 

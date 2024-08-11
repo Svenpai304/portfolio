@@ -5,219 +5,176 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DrRon's Portfolio Website</title>
-    <link rel="icon" href="https://i.gifer.com/6oa.gif" sizes="16x16"/>
+    <link rel="icon" href="https://i.gifer.com/6oa.gif" sizes="16x16" />
     <link rel="stylesheet" href="/assets/css/app.css">
 </head>
 
 <body class="defaultTheme" id="topOfPage">
 
-<div class="navigateBar defaultTheme">
-    <div class="pageButtons">
-        <a href="./index.html" class="disabled">
-            <iconify-icon icon="iconamoon:home-fill" width="16" height="16"></iconify-icon>
-            Home
-        </a>
-        <a href="./about.html">
-            <iconify-icon icon="mdi:about-circle-outline" width="16" height="16"></iconify-icon>
-            About
-        </a>
-        <a href="./projects.html">
-            <iconify-icon icon="material-symbols:work-outline" width="16" height="16"></iconify-icon>
-            Projects
-        </a>
-        <a href="./contact.html">
-            <iconify-icon icon="mdi:contact" width="16" height="16"></iconify-icon>
-            Contact
-        </a>
+    <div class="navigateBar defaultTheme">
+        <div class="pageButtons">
+            <a href="./index.html" class="disabled">
+                <iconify-icon icon="iconamoon:home-fill" width="16" height="16"></iconify-icon>
+                Home
+            </a>
+            <a href="./about.html">
+                <iconify-icon icon="mdi:about-circle-outline" width="16" height="16"></iconify-icon>
+                About
+            </a>
+            <a href="./projects.html">
+                <iconify-icon icon="material-symbols:work-outline" width="16" height="16"></iconify-icon>
+                Projects
+            </a>
+            <a href="./contact.html">
+                <iconify-icon icon="mdi:contact" width="16" height="16"></iconify-icon>
+                Contact
+            </a>
+        </div>
     </div>
-</div>
 
-<div class="banner">
-    <h1 class="wave-text">
-        <div>
-            <span>P</span>
-            <span>o</span>
-            <span>r</span>
-            <span>t</span>
-            <span>f</span>
-            <span>o</span>
-            <span>l</span>
-            <span>i</span>
-            <span>o</span>
-        </div>
-        <div>
-            <span>P</span>
-            <span>h</span>
-            <span>i</span>
-            <span>l</span>
-            <span>i</span>
-            <span>p</span>
-        </div>
-    </h1>
-    <h3>Game Developer and Music Enthusiast</h3>
-</div>
-
-
-<div class="container">
-    <div class="grid-container">
-        <div id="myinfo" class="grid-row">
-            <div class="grid-item info-content">
-                <h2>introduction</h2>
-                Greetings! My name is Philip. I am a Dutch <span>&#x1F1F3;&#x1F1F1;</span> student following the game development program at the HKU (Utrecht University of the Arts).
-                I am incredibly passionate about making games, creating music, drawing art and exploring new skills and knowledge.
-                <img src="/assets/img/drron_home.png" alt="Profile Image">
-            </div>
-        </div>
-        <div id="primary-web-art-languages" class="grid-row"></div>
-        <div id="secondary" class="grid-row secondary-row"></div>
+    <div class="banner">
+        <h1></h1>
     </div>
-</div>
 
-<script>
-    document.addEventListener('DOMContentLoaded', () => {
-        const primaryWebArtLanguagesRow = document.getElementById('primary-web-art-languages');
-        const secondaryRow = document.getElementById('secondary');
 
-        const skillCategories = [
-            {
-                title: 'Primary Skills',
-                skills: [
-                    {icon: 'devicon:csharp', name: 'C#'},
-                    {icon: 'skill-icons:unity-light', name: 'Unity'},
-                    {icon: 'logos:git-icon', name: 'Git'},
-                    {icon: 'mdi:github', name: 'GitHub'},
-                    {icon: 'devicon:visualstudio', name: 'Visual Studio'},
-                    {icon: 'logos:rider', name: 'Rider'},
-                    {icon: '/assets/img/icons/fork.png', name: 'Fork'}
-                ]
-            },
-            {
-                title: 'Secondary Skills',
-                skills: [
-                    {icon: 'vscode-icons:file-type-cpp3', name: 'C++'},
-                    {icon: '/assets/img/icons/sfml.png', name: 'SFML'},
-                    {icon: 'logos:opengl', name: 'OpenGL'},
-                    {icon: 'devicon:cmake', name: 'CMake'},
-                    {icon: 'logos:arduino', name: 'Arduino'},
-                    {icon: 'skill-icons:java-light', name: 'Java'},
-                    {icon: 'skill-icons:processing-light', name: 'Processing'},
-                    {icon: 'vscode-icons:file-type-drawio', name: 'Draw.io'},
-                    {icon: 'vscode-icons:file-type-plantuml', name: 'plant UML'},
-                    {icon: 'devicon:windows8', name: 'Windows'},
-                    {icon: 'devicon:linux', name: 'Linux'},
-                    {icon: 'codicon:terminal-cmd', name: 'Batch'},
-                    {icon: 'devicon:eclipse', name: 'Eclipse'},
-                ]
-            },
-            {
-                title: 'Art Skills',
-                skills: [
-                    {icon: 'logos:adobe-photoshop', name: 'Photoshop'},
-                    {icon: 'logos:adobe-illustrator', name: 'Illustrator'},
-                    {icon: 'logos:adobe-animate', name: 'Animate'},
-                    {icon: 'logos:adobe-premiere', name: 'Premiere Pro'},
-                    {icon: 'logos:adobe-after-effects', name: 'After Effects'},
-                    {icon: '/assets/img/icons/paintnet.png', name: 'Paint.NET'},
-                    {icon: '/assets/img/icons/krita.png', name: 'Krita'},
-                    {icon: '/assets/img/icons/aseprite.png', name: 'Aseprite'},
-                    {icon: '/assets/img/icons/flstudio.png', name: 'FL Studio'},
-                ]
-            },
-            {
-                title: 'Web Dev Skills',
-                skills: [
-                    {icon: 'logos:visual-studio-code', name: 'VS Code'},
-                    {icon: 'devicon:javascript', name: 'JavaScript'},
-                    {icon: 'skill-icons:html', name: 'HTML'},
-                    {icon: 'skill-icons:css', name: 'CSS'},
-                    {icon: 'vscode-icons:file-type-scss2', name: 'SCSS'},
-                    {icon: 'logos:nodejs-icon', name: 'Node.js'},
-                ]
-            },
-            {
-                title: 'Languages',
-                skills: [
-                    {icon: 'twemoji:flag-netherlands', name: 'Dutch: Native'},
-                    {icon: 'twemoji:flag-united-kingdom', name: 'English: Fluent'},
-                    {icon: 'twemoji:flag-spain', name: 'Spanish: Novice'}
-                ]
-            }
-        ];
-        function createSkillItem(skill) {
-            if (skill.icon.endsWith('.png')) {
-                return `
-                <li class="skill" title="${skill.name}">
-                    <img src="${skill.icon}" width="40px" height="40px">
-                </li>
-                `;
-            } else {
-                return `
-                <li class="skill" title="${skill.name}">
-                    <iconify-icon icon="${skill.icon}" width="40px" height="40px" class="textIcons"></iconify-icon>
-                </li>
-                `;
-            }
-        }
-        function createSkillCategory(category) {
-            let htmlContent = `
-            <div class="grid-item" id="language">
-                <h2>${category.title}</h2>
-                <ul>
-            `;
+    <div class="container">
+        <div class="grid-container">
+            <div id="myinfo" class="grid-row">
+                <div class="grid-item info-content">
+                    <h2>introduction</h2>
+                    Hi! I'm Sven Wels, a Dutch game programmer studying game development at the HKU in Utrecht. I love making things, and mainly focus professionally on gameplay programming.
 
-            category.skills.forEach(skill => {
-                htmlContent += createSkillItem(skill);
-                htmlContent += `<li>${skill.name}</li>`; // Add skill name as list item
-            });
-
-            htmlContent += `
-                </ul>
+                </div>
             </div>
-            `;
+            <div id="primary-web-art-languages" class="grid-row"></div>
+            <div id="secondary" class="grid-row secondary-row"></div>
+        </div>
+    </div>
 
-            return htmlContent;
-        }
-        function createNoTextSkillCategory(category, id = '') {
-            let htmlContent = `
-            <div class="grid-item" >
-                <h2>${category.title}</h2>
-                <ul>
-            `;
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const primaryWebArtLanguagesRow = document.getElementById('primary-web-art-languages');
+            const secondaryRow = document.getElementById('secondary');
 
-            category.skills.forEach(skill => {
-                htmlContent += createSkillItem(skill); // Only list skill names
-            });
+            const skillCategories = [
+                {
+                    title: 'Primary Tools',
+                    skills: [
+                        { icon: 'devicon:csharp', name: 'C#' },
+                        { icon: 'skill-icons:unity-light', name: 'Unity' },
+                        { icon: 'logos:git-icon', name: 'Git' },
+                        { icon: 'devicon:visualstudio', name: 'Visual Studio' },
+                        { icon: 'logos:blender', name: 'Blender' }
+                    ]
+                },
+                {
+                    title: 'Secondary Tools',
+                    skills: [
+                        { icon: 'vscode-icons:file-type-cpp3', name: 'C++' },
+                        { icon: '/assets/img/icons/sfml.png', name: 'SFML' },
+                        { icon: 'logos:opengl', name: 'OpenGL' },
+                        { icon: 'devicon:cmake', name: 'CMake' },
+                        { icon: 'skill-icons:java-light', name: 'Java' },
+                        { icon: 'skill-icons:processing-light', name: 'Processing' },
+                        { icon: 'vscode-icons:file-type-plantuml', name: 'plant UML' },
+                        { icon: 'devicon:godot', name: 'Godot' },
+                        { icon: 'devicon:gimp', name: 'GIMP' }
+                    ]
+                },
+                {
+                    title: 'Hardware Hacking Tools',
+                    skills: [
+                        { icon: 'devicon:visualstudio', name: 'Visual Studio' },
+                        { icon: 'logos:arduino', name: 'Arduino' },
+                        { icon: 'simple-icons:autodesk', name: 'Solidworks, Fusion 360' },
+                        { icon: 'mdi:soldering-iron', name: 'Soldering/Electronics' },
+                        { icon: 'cbi:3dprinter-standby', name: '3D Printing' }
 
-            htmlContent += `
-                </ul>
-            </div>
-            `;
-
-            return htmlContent;
-        }
-
-        const primaryWebArtLanguagesCategories = ['Primary Skills', 'Art Skills', 'Web Dev Skills'];
-        const secondaryCategories = ['Secondary Skills', 'Languages'];
-
-        skillCategories.forEach(category => {
-            if (primaryWebArtLanguagesCategories.includes(category.title)) {
-                primaryWebArtLanguagesRow.innerHTML += createNoTextSkillCategory(category);
-            } else if (category.title === 'Languages') {
-                secondaryRow.innerHTML += createSkillCategory(category);
-            } else {
-                secondaryRow.innerHTML += createNoTextSkillCategory(category);
+                    ]
+                },
+                {
+                    title: 'Languages',
+                    skills: [
+                        { icon: 'twemoji:flag-netherlands', name: 'Dutch: Native' },
+                        { icon: 'twemoji:flag-united-kingdom', name: 'English: Fluent (C2)' }
+                    ]
+                }
+            ];
+            function createSkillItem(skill) {
+                if (skill.icon.endsWith('.png')) {
+                    return `
+                        <li class="skill" title="${skill.name}">
+                            <img src="${skill.icon}" width="40px" height="40px">
+                        </li>
+                        `;
+                } else {
+                    return `
+                        <li class="skill" title="${skill.name}">
+                            <iconify-icon icon="${skill.icon}" width="40px" height="40px" class="textIcons"></iconify-icon>
+                        </li>
+                        `;
+                }
             }
+            function createSkillCategory(category) {
+                let htmlContent = `
+                    <div class="grid-item" id="language">
+                        <h2>${category.title}</h2>
+                        <ul>
+                    `;
+
+                category.skills.forEach(skill => {
+                    htmlContent += createSkillItem(skill);
+                    htmlContent += `<li>${skill.name}</li>`; // Add skill name as list item
+                });
+
+                htmlContent += `
+                        </ul>
+                    </div>
+                    `;
+
+                return htmlContent;
+            }
+            function createNoTextSkillCategory(category, id = '') {
+                let htmlContent = `
+                    <div class="grid-item" >
+                        <h2>${category.title}</h2>
+                        <ul>
+                    `;
+
+                category.skills.forEach(skill => {
+                    htmlContent += createSkillItem(skill); // Only list skill names
+                });
+
+                htmlContent += `
+                        </ul>
+                    </div>
+                    `;
+
+                return htmlContent;
+            }
+
+            const primaryWebArtLanguagesCategories = ['Primary Tools', 'Hardware Hacking Tools'];
+            const secondaryCategories = ['Secondary Tools', 'Languages'];
+
+            skillCategories.forEach(category => {
+                if (primaryWebArtLanguagesCategories.includes(category.title)) {
+                    primaryWebArtLanguagesRow.innerHTML += createNoTextSkillCategory(category);
+                } else if (category.title === 'Languages') {
+                    secondaryRow.innerHTML += createSkillCategory(category);
+                } else {
+                    secondaryRow.innerHTML += createNoTextSkillCategory(category);
+                }
+            });
         });
-    });
-</script>
+    </script>
 
 
-<a href="#topOfPage" class="scrollButton">
-    <iconify-icon icon="mdi:arrow-top-drop-circle-outline" width="48" height="48" style="color: white"></iconify-icon>
-</a>
+    <a href="#topOfPage" class="scrollButton">
+        <iconify-icon icon="mdi:arrow-top-drop-circle-outline" width="48" height="48" style="color: white"></iconify-icon>
+    </a>
 
-<script src="/assets/js/app.js"></script>
-<script src="https://code.iconify.design/iconify-icon/2.0.0/iconify-icon.min.js"></script>
+    <script src="/assets/js/app.js"></script>
+    <script src="https://code.iconify.design/iconify-icon/2.0.0/iconify-icon.min.js"></script>
 
 </body>
 

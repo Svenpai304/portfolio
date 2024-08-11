@@ -1,5 +1,6 @@
 .defaultTheme {
-  background: #1f1f1f;
+    background: #000f;
+    font-family: 'Courier New', monospace;
 }
 
 .textIcons {
@@ -10,16 +11,25 @@
   max-width: 70%;
   display: flex;
   justify-content: center;
-/*  margin: 0 auto;
-  margin-top: 15px;*/
+  margin: 0 auto;
+  margin-top: 15px;
   
+}
+
+.fadeout {
+    display: flex;
+    height: 50vh;
+    transform: scaleY(-1);
+    overflow: hidden;
+    background-image: url("/assets/img/halftone3.png");
+    
 }
 
 .projContainer{
   @extend .container;
   
   & h1 {
-    font-family: 'Outfit', sans-serif;
+    font-family: 'Courier New', monospace;
     font-size: 50px;
     margin: 10px;
     color: white;
